@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calendar</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="calendar">
+      <div class="calendar__top">
+        <div class="calendar__date-picker date-picker">
+          <div class="calendar__check-in">
+            <label for="check-in">Check-in</label>
+            <input name="" id="check-in" placeholder="Add dates" />
+          </div>
+
+          <div class="calendar__check-out">
+            <label for="check-out">Check-in</label>
+            <input name="" id="check-in" placeholder="Add dates" />
+          </div>
+
+          <div class="calendar__guests">
+            <label for="guests">Guests</label>
+            <input type="number" name="" id="guests" placeholder="1" />
+          </div>
+          <button class="calendar__button">BOOK</button>
+        </div>
+      </div>
+      <div class="calendar__bottom">
+        <div class="month month1">
+          <table class="month__table">
+            <caption class="month__title">
+              <button class="month__button-back">
+                <svg
+                  class="month__arrow-left"
+                  width="22"
+                  height="17"
+                  viewBox="0 0 22 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.3">
+                    <path
+                      d="M8.87947 1C8.80211 1 8.72475 1.02819 8.66552 1.084L1.08824 8.29797C1.03203 8.35206 1 8.42513 1 8.50165C1 8.57818 1.03203 8.65125 1.08824 8.70533L8.66612 15.9159C8.78398 16.028 8.97557 16.028 9.09343 15.9159C9.21128 15.8037 9.21128 15.6213 9.09343 15.5091L1.7295 8.50165L9.09343 1.49136C9.21128 1.37917 9.21128 1.19678 9.09343 1.08458C9.03419 1.02819 8.95683 1 8.87947 1Z"
+                      stroke-width="0.681818"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <span class="month__name">January</span>
+              <span class="month__year">2001</span>
+            </caption>
+            <thead class="month__head">
+              <tr class="month__days">
+                <th>mo</th>
+                <th>tu</th>
+                <th>we</th>
+                <th>th</th>
+                <th>fr</th>
+                <th>sa</th>
+                <th>su</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="month__week">
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr class="month__week">
+                <td class="select-start">6</td>
+                <td class="select-between">7</td>
+                <td class="select-between">8</td>
+                <td class="select-between">9</td>
+                <td class="select-end">10</td>
+                <td>11</td>
+                <td>12</td>
+              </tr>
+              <tr class="month__week">
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+              </tr>
+              <tr class="month__week">
+                <td>20</td>
+                <td>20</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+              </tr>
+              <tr class="month__week">
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr class="month__week">
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="month month2">
+          <table class="month__table">
+            <caption class="month__title">
+              <button class="month__button-back">
+                <svg
+                  class="month__arrow-left"
+                  width="22"
+                  height="17"
+                  viewBox="0 0 22 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.3">
+                    <path
+                      d="M8.87947 1C8.80211 1 8.72475 1.02819 8.66552 1.084L1.08824 8.29797C1.03203 8.35206 1 8.42513 1 8.50165C1 8.57818 1.03203 8.65125 1.08824 8.70533L8.66612 15.9159C8.78398 16.028 8.97557 16.028 9.09343 15.9159C9.21128 15.8037 9.21128 15.6213 9.09343 15.5091L1.7295 8.50165L9.09343 1.49136C9.21128 1.37917 9.21128 1.19678 9.09343 1.08458C9.03419 1.02819 8.95683 1 8.87947 1Z"
+                      stroke-width="0.681818"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <span class="month__name">February</span>
+              <span class="month__year">2001</span>
+            </caption>
+            <thead class="month__head">
+              <tr class="month__days">
+                <th>mo</th>
+                <th>tu</th>
+                <th>we</th>
+                <th>th</th>
+                <th>fr</th>
+                <th>sa</th>
+                <th>su</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="month__week">
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr class="month__week">
+                <td class="select-start">6</td>
+                <td class="select-between">7</td>
+                <td class="select-between">8</td>
+                <td class="select-between">9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+              </tr>
+              <tr class="month__week">
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+              </tr>
+              <tr class="month__week">
+                <td>20</td>
+                <td>20</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+              </tr>
+              <tr class="month__week">
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr class="month__week">
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
