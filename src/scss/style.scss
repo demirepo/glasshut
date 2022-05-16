@@ -4,6 +4,8 @@
 
 /*  --- COLORS --- */
 $primary: #5b6460;
+
+// $primary: #f00;
 $secondary: #808e88;
 $bg-primary: #fff;
 $bg-secondary: #e9ece0;
@@ -15,7 +17,6 @@ $fw-light: 300;
 $fw-normal: 400;
 $fw-medium: 600;
 $fw-bold: 700;
-
 $fz-xs: 12px;
 $fz-sm: 14px;
 $fz-m: 16px;
@@ -25,19 +26,34 @@ $fz-xxl: 40px;
 
 /*  --- MISC --- */
 $base: 4px;
+$container-width: 1410px;
+$container-padding: 32px;
 $transition-time: 0.2s;
-$main-interval: 150px;
+
+:root {
+  --big-interval: 150px;
+  --mid-interval: 100px;
+}
 
 /* #endregion --- VARIABLES --- */
+
+/* #region --- MIXINS --- */
+
+/* #endregion --- MIXINS --- */
 
 /* #region --- COMMON --- */
 
 *,
-*::after,
-*::before {
-  box-sizing: border-box;
+*::before,
+*::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
 
 ul li {
@@ -55,11 +71,13 @@ a:hover {
   text-decoration: none;
 }
 
-img {
-  vertical-align: top;
+hr {
+  border-color: inherit;
 }
 
-h2 {
+h1 {
+  margin: 0;
+  color: $bg-primary;
   font-weight: $fw-light;
   font-style: normal;
   font-size: 70px;
@@ -67,8 +85,9 @@ h2 {
   line-height: 72px;
 }
 
-h3 {
+h2 {
   margin-bottom: 50px;
+  color: $primary;
   font-weight: $fw-normal;
   font-style: normal;
   font-size: $fz-xxl;
@@ -76,12 +95,8 @@ h3 {
   line-height: 40px;
 }
 
-body,
-html {
-  height: 100%;
-}
-
 body {
+  min-height: 100%;
   color: $black;
   font-weight: $fw-light;
   font-size: $fz-sm;
@@ -89,28 +104,18 @@ body {
   line-height: 30px;
 }
 
-button,
-input,
-textarea {
-  font-size: inherit;
-}
-
 .container {
-  max-width: 1410px;
+  max-width: $container-width;
   margin: 0 auto;
-  padding: 0 33px;
+  padding: 0 $container-padding;
 }
 
 .section {
-  margin-bottom: $main-interval;
+  margin-bottom: var(--big-interval);
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 286px;
-  height: 100px;
+  padding: 16px 50px;
   border: none;
   background-color: $primary;
   color: $bg-primary;
@@ -119,6 +124,7 @@ textarea {
   line-height: 28px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  white-space: nowrap;
   cursor: pointer;
   transition: $transition-time;
 
@@ -126,52 +132,33 @@ textarea {
     background-color: $secondary;
   }
 
-  &.button-sm {
+  &.button--header {
     width: 200px;
     height: 60px;
     margin-left: 40px;
-    color: $bg-primary;
+    font-weight: $fw-light;
+    font-size: $fz-sm;
+  }
+
+  &.button--faq {
+    font-size: $fz-sm;
+    line-height: 28px;
   }
 }
-
-/* // .button {
-//   padding: 16px 60px;
-//   background-color: $olive-dark;
-//   color: $white;
-//   font-size: 14px;
-//   line-height: 28px;
-//   text-align: center;
-//   text-transform: uppercase;
-// } */
 
 /* #endregion --- COMMON --- */
 
 .booking-frame {
   position: relative;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 386px;
   height: 100px;
 
-  & button {
+  &__button {
     flex-basis: 260px;
-    height: 100%;
-    border: none;
-    background-color: $primary;
-    color: $bg-primary;
-    font-style: normal;
-    font-size: $fz-l;
-    line-height: 100px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: $transition-time;
-
-    &:hover {
-      background-color: $secondary;
-    }
+    height: 100px;
   }
 
   &__price {
@@ -220,11 +207,11 @@ textarea {
     align-items: center;
     justify-content: space-between;
     height: 100px;
-    padding-right: 32px;
+    padding-right: $container-padding;
   }
 
   &__logo {
-    margin: 18px 0 17px $main-interval;
+    margin: 18px 0 17px var(--big-interval);
   }
 }
 
@@ -233,15 +220,12 @@ textarea {
   list-style: none;
 }
 
-.menu__list:last-child {
-  margin-left: 25px;
-}
-
 .menu__list-item {
   margin-left: 36px;
   font-size: $fz-sm;
   line-height: 24px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* #endregion --- HEADER --- */
@@ -251,7 +235,7 @@ textarea {
 .poster {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 36vw;
   padding: 0 15px;
   background-color: #7ba1ba;
   background-image: url("./../img/cabin1.jpg");
@@ -261,18 +245,29 @@ textarea {
 
   &__inner {
     position: absolute;
-    top: 95px;
-    right: 60px;
+    top: 0%;
+    right: 0%;
+    padding-top: 3%;
+    padding-right: 3%;
     color: $bg-primary;
+    text-align: right;
+  }
+
+  &__title {
+    color: $bg-primary;
+    font-weight: $fw-light;
+    font-size: 70px;
+    line-height: 72px;
   }
 
   &__text {
     position: relative;
-    left: 326px;
-    width: 50%;
+    width: max-content;
     margin-top: 34px;
+    margin-left: auto;
+    padding-right: 4rem;
     font-weight: $fw-normal;
-    font-size: $fz-xl;
+    font-size: calc($fz-xs * 1.7);
     font-family: "Mulish", sans-serif;
     line-height: 28px;
   }
@@ -283,9 +278,10 @@ textarea {
 }
 
 .poster-button {
-  position: relative;
-  top: 663px;
-  margin-left: $main-interval;
+  position: absolute;
+  top: 36vw;
+  left: calc(var(--big-interval) + $container-padding);
+  transform: translateY(-70%);
 }
 
 /* #endregion --- POSTER --- */
@@ -293,13 +289,24 @@ textarea {
 /* #region --- CABINS --- */
 
 .cabins {
+  width: 100%;
+
   &__top {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: space-between;
+    width: 100%;
   }
 
-  &__top-left {
-    align-self: end;
+  &__content-inner {
+    width: 100%;
+    padding-right: 15%;
+    padding-left: calc(var(--big-interval) + $container-padding);
+  }
+
+  &__content {
+    flex-basis: 50%;
   }
 
   &__text {
@@ -307,20 +314,15 @@ textarea {
   }
 
   &__img {
-    min-width: 50%;
+    flex-basis: 50%;
   }
 
   &__img img {
-    max-width: 100%;
-  }
-
-  &__top-left-inner {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-end;
-    margin-right: 105px;
-    margin-left: $main-interval;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    min-width: 0;
+    height: auto;
   }
 
   &__bottom {
@@ -328,7 +330,7 @@ textarea {
     flex-wrap: no-wrap;
     gap: 24px;
     justify-content: center;
-    margin-top: $main-interval;
+    margin-top: var(--big-interval);
   }
 
   &__bottom-img {
@@ -338,7 +340,7 @@ textarea {
 
 .readmore {
   display: inline;
-  align-self: start;
+  align-self: flex-start;
   padding-bottom: 3px;
   border-bottom: 2px solid $primary;
   color: #5b6460;
@@ -355,10 +357,15 @@ textarea {
 .location {
   &__inner {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__map {
-    min-width: 50%;
+    flex-grow: 1;
+    flex-basis: 50%;
+    min-width: 510px;
+    height: auto;
+    min-height: 400px;
   }
 
   &__map iframe {
@@ -368,10 +375,13 @@ textarea {
 
   &__description {
     display: flex;
+    flex-grow: 1;
+    flex-basis: 50%;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    padding: $main-interval 130px 100px;
+    min-width: 510px;
+    padding: var(--big-interval) 130px 100px;
     background-color: $bg-secondary;
   }
 
@@ -396,7 +406,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: $main-interval 50px 50px;
+    padding: var(--big-interval) 50px 50px;
     background-color: $primary;
   }
 
@@ -404,7 +414,7 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 840px;
     margin: 0 auto;
   }
@@ -414,7 +424,7 @@ textarea {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     min-width: 210px;
     min-height: 190px;
 
@@ -503,8 +513,14 @@ textarea {
 .contacts {
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 $main-interval;
+    padding: 0 var(--big-interval);
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-right: 50px;
   }
 
   &__text {
@@ -514,8 +530,8 @@ textarea {
   &__widget {
     display: flex;
     flex-direction: column;
-    align-self: end;
-    justify-content: start;
+    align-self: flex-end;
+    justify-content: flex-start;
     margin-left: auto;
   }
 
@@ -553,14 +569,21 @@ textarea {
 /* #region --- FOOTER --- */
 
 .footer {
+  display: flex;
+  justify-content: space-between;
   background-color: $primary;
   color: $bg-secondary;
+
+  &__subscription {
+    flex-basis: 50%;
+    padding-right: 50px;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 100px $main-interval;
+    padding: 100px var(--big-interval);
   }
 
   & .container {
@@ -583,8 +606,9 @@ textarea {
 
   &__info {
     display: flex;
+    flex-basis: 50%;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
   }
 
   &__policy-list {
@@ -616,20 +640,27 @@ textarea {
 
 .sub-form {
   position: relative;
+  max-width: 80ch;
+  margin-bottom: 5px;
   border-bottom: 1px solid $bg-secondary;
 
-  & input {
+  &__input {
     width: 100%;
+    padding-right: 40px;
     border: none;
     background-color: $primary;
     color: $bg-primary;
-    outline: none;
+    font-weight: $fw-light;
     font-style: italic;
     font-size: $fz-m;
     line-height: 30px;
 
     &::placeholder {
       color: $bg-primary;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
     }
   }
 
@@ -661,13 +692,11 @@ textarea {
 /* #region  --- CALENDAR --- */
 
 .calendar {
-  display: flex;
-  flex-direction: column;
   margin: 50px;
 
   &__top {
     display: flex;
-    min-width: 670px;
+    max-width: 676px;
     min-height: 66px;
     font-weight: 300;
     font-style: italic;
@@ -676,56 +705,74 @@ textarea {
   }
 
   &__date-picker {
-    display: flex;
-    flex-basis: 465px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
     border: 0.7px solid #333;
+
+    & input {
+      width: 100%;
+      border: none;
+      font-weight: 400;
+      font-style: normal;
+      font-size: $fz-sm;
+      line-height: 18px;
+
+      &::placeholder {
+        color: #828282;
+      }
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   &__check-in,
   &__check-out,
   &__guests {
-    display: flex;
-    flex-basis: 33%;
-    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 110px;
+    max-width: 159px;
     padding: 0 20px;
     border-right: 0.7px solid $grey;
+
+    & span {
+      display: block;
+      margin-bottom: 3px;
+      color: $grey;
+      font-size: $fz-xs;
+      line-height: 16px;
+    }
   }
 
   &__guests {
     border: none;
   }
 
-  &__check-in input,
-  &__check-out input,
-  &__guests input {
-    border: none;
-    font-weight: 400;
+  &__quantity span {
+    display: inline-flex;
+    font-weight: $fw-normal;
     font-style: normal;
     font-size: $fz-sm;
-    line-height: 18px;
+  }
+
+  &__quantity-value,
+  &__plus-btn {
+    margin-left: 20px;
   }
 
   &__button {
-    width: 208px;
+    flex-grow: 1;
+    min-width: 207px;
     height: 66px;
-    background-color: $primary;
-    color: $bg-primary;
-    color: #fff;
-    font-weight: 300;
-    font-style: normal;
-    font-size: $fz-sm;
-    font-family: "Open Sans", sans-serif;
-    line-height: 28px;
-    letter-spacing: 1px;
-
-    /* identical to box height, or 200% */
-
-    text-align: center;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: $secondary;
-    }
+    margin-left: auto;
   }
 
   &__bottom {
@@ -734,28 +781,61 @@ textarea {
     max-width: 676px;
     min-height: 380px;
     margin-top: 10px;
+    padding: 25px;
     border: 1px solid $grey;
 
-    & .month1 {
+    & .current-month {
       margin-right: 0;
+      margin-bottom: 0;
     }
 
-    & .month2 {
+    & .next-month {
+      margin-bottom: 0;
       margin-left: 0;
     }
+  }
+
+  &__buttons {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  &__clear {
+    background-color: $bg-primary;
+    color: $grey;
+    font-weight: $fw-medium;
+    font-size: $fz-sm;
+    font-family: "Open Sans", sans-serif;
+    line-height: 18px;
+    text-decoration: underline;
+    text-transform: none;
+
+    &:hover {
+      background-color: $bg-secondary;
+      color: $black;
+    }
+  }
+
+  &__close {
+    width: 66px;
+    height: 32px;
+    margin-left: 20px;
+    font-weight: $fw-normal;
+    font-size: $fz-sm;
+    line-height: 18px;
+    text-transform: none;
   }
 }
 
 .month {
   display: inline-block;
-  margin: 25px;
   padding: 16px;
 
-  &__table {
+  .month__table {
     border-collapse: collapse;
   }
 
-  &__title {
+  .month__title {
     position: relative;
     margin-bottom: 17px;
     padding: 0 16px;
@@ -764,12 +844,21 @@ textarea {
     line-height: 16px;
   }
 
-  &__button-back {
+  .month.current-month &__prev-next-btn {
     position: absolute;
     bottom: 0;
     left: 0;
     border: none;
     background-color: $bg-primary;
+  }
+
+  &.next-month &__prev-next-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-color: $bg-primary;
+    transform: rotate(180deg);
   }
 
   &__arrow-left {
@@ -799,6 +888,11 @@ textarea {
     font-weight: 400;
     font-size: $fz-sm;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e4e4e4;
+    }
 
     &.select-start,
     &.select-end {
@@ -808,7 +902,7 @@ textarea {
       color: $bg-primary;
     }
 
-    &.select-start::after {
+    &.select-start.extended::after {
       content: "";
       position: absolute;
       top: 0;
@@ -820,7 +914,7 @@ textarea {
       background-color: #e4e4e4;
     }
 
-    &.select-end::before {
+    &.select-end.extended::before {
       content: "";
       position: absolute;
       top: 0;
@@ -839,3 +933,144 @@ textarea {
 }
 
 /* #endregion  --- CALENDAR --- */
+
+/* #region  --- BOOKING --- */
+
+.banner {
+  width: 100%;
+  height: 350px;
+  padding-top: 70px;
+  background: #baa1b4 url("./../img/booking.jpg") no-repeat 50% 50% / cover;
+  text-align: center;
+
+  & h1 {
+    margin-bottom: 15px;
+    font-weight: $fw-light;
+    font-size: 70px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 72px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    color: $bg-primary;
+    font-size: $fz-l;
+    line-height: 24px;
+    text-decoration: underline;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      display: inline-block;
+      width: 15px;
+      height: 24px;
+      background: url("./../img/location.svg") no-repeat 50% 50%;
+    }
+  }
+}
+
+.booking {
+  & h2 {
+    margin: 100px 0 20px;
+    color: #5b6460;
+    font-weight: $fw-normal;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: var(--big-interval);
+  }
+
+  &__services {
+    flex-basis: 53%;
+  }
+
+  &__info {
+    color: $grey;
+  }
+
+  &__checkout {
+    flex-basis: 35%;
+    padding: 24px;
+    border: 1px solid #000;
+  }
+
+  &__read-faq {
+    position: relative;
+    left: 50%;
+
+    // display: inline-block;
+    min-width: 180px;
+    min-height: 55px;
+    margin: var(--mid-interval) 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* #endregion  --- BOOKING --- */
+
+/* #region  --- ADAPTIVE --- */
+@media (max-width: 1350px) {
+  .footer__info {
+    align-items: flex-end;
+  }
+
+  .footer__policy-list {
+    flex-direction: column;
+    align-items: flex-end;
+
+    .footer__policy-item {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --big-interval: 75px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .header {
+    display: none;
+  }
+
+  .cabins__top {
+    flex-flow: column wrap;
+  }
+
+  .cabins__img {
+    flex: 1;
+    margin: 32px auto 0;
+  }
+
+  .contacts__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contacts__content {
+    margin-right: 0;
+  }
+
+  .contacts__widget {
+    margin: 32px auto;
+  }
+}
+
+@media (max-width: 321px) {
+  .contacts__widget {
+    transform: scale(80%);
+  }
+}
+
+/* #endregion  --- ADAPTIVE --- */

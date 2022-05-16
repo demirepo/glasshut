@@ -4,7 +4,8 @@
   "description": "gulp template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
@@ -17,12 +18,13 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify-es": "^3.0.0",
-    "sass": "^1.38.1",
-    "stylelint": "^14.1.0",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0"
+    "sass": "^1.51.0",
+    "stylelint": "14.8.2",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-config-standard-scss": "3.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.5.0",
+    "stylelint-order": "5.0.0",
+    "stylelint-scss": "4.2.0"
   },
   "dependencies": {}
 }

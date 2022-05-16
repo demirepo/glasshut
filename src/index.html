@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/main.min.js"></script>
     <title>Glass Hut</title>
   </head>
 
@@ -48,7 +49,7 @@
               </li>
             </ul>
           </nav>
-          <button class="button button-sm" href="calendar.html">
+          <button class="button button--header" href="calendar.html">
             book now
           </button>
         </div>
@@ -67,7 +68,7 @@
           </div>
         </div>
         <div class="booking-frame poster-button">
-          <button class="booking-frame__button">BOOK NOW</button>
+          <button class="booking-frame__button button">BOOK NOW</button>
           <div class="booking-frame__price">
             <p>€3.200</p>
           </div>
@@ -76,27 +77,27 @@
     </section>
 
     <section class="cabins section">
-      <div class="container">
-        <div class="cabins__top">
-          <div class="cabins__top-left">
-            <div class="cabins__top-left-inner">
-              <h3 class="cabins__title">The Cabins</h3>
-              <div class="cabins__text">
-                Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly,
-                are designed by architect Sigurd Larsen. They all have an open
-                space with a double bed, a double sofa bed, kitchen, separate
-                toilet and an outdoor shower. On the roof, surrounded by
-                treetops, there is a terrace, which is about nine meters above
-                ground. The cottages are built around tall, old trees that go
-                through the entire cottage from floor to ceiling.
-              </div>
-              <a class="readmore" href="#">Read more</a>
+      <div class="cabins__top">
+        <div class="cabins__content">
+          <div class="cabins__content-inner">
+            <h2 class="cabins__title">The Cabins</h2>
+            <div class="cabins__text">
+              Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly,
+              are designed by architect Sigurd Larsen. They all have an open
+              space with a double bed, a double sofa bed, kitchen, separate
+              toilet and an outdoor shower. On the roof, surrounded by treetops,
+              there is a terrace, which is about nine meters above ground. The
+              cottages are built around tall, old trees that go through the
+              entire cottage from floor to ceiling.
             </div>
-          </div>
-          <div class="cabins__img">
-            <img src="img/cabins1.jpg" alt="cabins" />
+            <a class="readmore" href="#">Read more</a>
           </div>
         </div>
+        <div class="cabins__img">
+          <img src="img/cabins1.jpg" alt="cabins" />
+        </div>
+      </div>
+      <div class="container">
         <div class="cabins__bottom">
           <div class="cabins__bottom-image">
             <img class="cabins__bottom-img" src="img/cabins2.jpg" alt="" />
@@ -123,7 +124,7 @@
           ></iframe>
         </div>
         <div class="location__description">
-          <h3 class="location__title">The Forest</h3>
+          <h2 class="location__title">The Forest</h2>
           <div class="location__text">
             Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are
             designed by architect Sigurd Larsen. They all have an open space
@@ -247,7 +248,7 @@
         <img src="img/aboutus-1.jpg" alt="" class="aboutus__img" />
         <img src="img/aboutus-2.jpg" alt="" class="aboutus__img" />
         <div class="aboutus__button">
-          <a href="#" class="aboutus__link">More about us</a>
+          <a class="aboutus__link" href="#">More about us</a>
         </div>
       </div>
     </div>
@@ -255,8 +256,8 @@
     <section class="contacts section">
       <div class="container">
         <div class="contacts__inner">
-          <div class="contacts_info">
-            <h3 class="contacts__title">Stay in touch with us</h3>
+          <div class="contacts__content">
+            <h2 class="contacts__title">Stay in touch with us</h2>
             <div class="contacts__text">
               <p>Vesterborg, Denmark</p>
               <br />
@@ -296,11 +297,16 @@
           </div>
 
           <div class="contacts__widget">
-            <div class="contacts__widget-img">
-              <img height="188" width="386" src="img/widget-img.jpg" alt="" />
-            </div>
+            <img
+              class="contacts__widget-img"
+              height="188"
+              width="386"
+              src="img/widget-img.jpg"
+              alt=""
+            />
+
             <div class="booking-frame">
-              <button class="booking-frame__button">BOOK NOW</button>
+              <button class="booking-frame__button button">BOOK NOW</button>
               <div class="booking-frame__price">
                 <p>€3.200</p>
               </div>
@@ -316,7 +322,11 @@
           <div class="footer__subscription">
             <p>Newsletter</p>
             <form class="sub-form" action="#">
-              <input placeholder="Email Address" type="text" />
+              <input
+                class="sub-form__input"
+                placeholder="Email Address"
+                type="text"
+              />
               <button class="sub-form__submit" type="submit">
                 <svg
                   class="sub-form__arrow"
@@ -327,7 +337,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M0.619484 9.18175H32.3805C32.7225 9.18175 33 8.8763 33 8.49993C33 8.12357 32.7225 7.81812 32.3805 7.81812H0.619484C0.277527 7.81812 0 8.12357 0 8.49993C0 8.8763 0.277527 9.18175 0.619484 9.18175Z"
+                    d="M0.619484 9.18175h22.3805C32.7225 9.18175 33 8.8763 33 8.49993C33 8.12357 32.7225 7.81812 32.3805 7.81812H0.619484C0.277527 7.81812 0 8.12357 0 8.49993C0 8.8763 0.277527 9.18175 0.619484 9.18175Z"
                     fill="#EFEFEF"
                   />
                   <path
@@ -340,8 +350,8 @@
               </button>
             </form>
             <p>
-              Sign up to our newsletter for special things and receive<br />
-              10% off your next order.
+              Sign up to our newsletter for special things and receive 10% off
+              your next order.
             </p>
             <p>© 2021 The Glass Huts</p>
           </div>

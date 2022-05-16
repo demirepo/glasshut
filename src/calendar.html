@@ -12,36 +12,40 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./js/main.min.js"></script>
     <title>Calendar</title>
-
-    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <div class="calendar">
       <div class="calendar__top">
-        <div class="calendar__date-picker date-picker">
+        <form class="calendar__date-picker datepicker">
           <div class="calendar__check-in">
-            <label for="check-in">Check-in</label>
-            <input name="" id="check-in" placeholder="Add dates" />
+            <span><label for="check-in">Check-in</label></span>
+            <input name="check-in" id="check-in" placeholder="Add dates" />
           </div>
 
           <div class="calendar__check-out">
-            <label for="check-out">Check-in</label>
-            <input name="" id="check-in" placeholder="Add dates" />
+            <span><label for="check-out">Check-in</label></span>
+            <input name="check-out" id="check-out" placeholder="Add dates" />
           </div>
 
           <div class="calendar__guests">
-            <label for="guests">Guests</label>
-            <input type="number" name="" id="guests" placeholder="1" />
+            <span>Guests</span>
+            <div class="calendar__quantity">
+              <span class="calendar__minus-btn">-</span>
+              <span class="calendar__quantity-value">1</span>
+              <span class="calendar__plus-btn">+</span>
+            </div>
           </div>
-          <button class="calendar__button">BOOK</button>
-        </div>
+          <button type="submit" class="calendar__button button">BOOK</button>
+        </form>
       </div>
+
       <div class="calendar__bottom">
-        <div class="month month1">
+        <div class="calendar__month month current-month">
           <table class="month__table">
             <caption class="month__title">
-              <button class="month__button-back">
+              <button class="month__prev-next-btn">
                 <svg
                   class="month__arrow-left"
                   width="22"
@@ -58,8 +62,8 @@
                   </g>
                 </svg>
               </button>
-              <span class="month__name">January</span>
-              <span class="month__year">2001</span>
+              <span class="month__name">April</span>
+              <span class="month__year">1984</span>
             </caption>
             <thead class="month__head">
               <tr class="month__days">
@@ -76,64 +80,64 @@
               <tr class="month__week">
                 <td></td>
                 <td></td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr class="month__week">
-                <td class="select-start">6</td>
-                <td class="select-between">7</td>
-                <td class="select-between">8</td>
-                <td class="select-between">9</td>
-                <td class="select-end">10</td>
-                <td>11</td>
-                <td>12</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr class="month__week">
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr class="month__week">
-                <td>20</td>
-                <td>20</td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr class="month__week">
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr class="month__week">
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="month month2">
+        <div class="calendar__month month next-month">
           <table class="month__table">
             <caption class="month__title">
-              <button class="month__button-back">
+              <button class="month__prev-next-btn">
                 <svg
                   class="month__arrow-left"
                   width="22"
@@ -180,7 +184,7 @@
                 <td class="select-between">8</td>
                 <td class="select-between">9</td>
                 <td>10</td>
-                <td>11</td>
+                <td class="select-end">11</td>
                 <td>12</td>
               </tr>
               <tr class="month__week">
@@ -222,7 +226,14 @@
             </tbody>
           </table>
         </div>
+        <div class="calendar__buttons">
+          <button class="calendar__clear button">Clear dates</button>
+          <button class="calendar__close button">Close</button>
+        </div>
       </div>
     </div>
   </body>
+  <div class="wrapper">
+    <div class="elem"></div>
+  </div>
 </html>
