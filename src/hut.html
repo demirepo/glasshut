@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script defer src="./js/main.min.js"></script>
+
+    <title>Booking</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="index.html">
+            <img class="header__logo-img" src="img/logo.svg" alt="logo" />
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__link menu__link--active" href="index.html">
+                  home
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__link" href="#"> the hut </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__link" href="#"> the area </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__link" href="booking.html">booking</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__link" href="aboutus.html"> about us </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__link" href="#"> faq </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__language" href="#">
+                  <img class="menu__language-img" src="img/uk.svg" alt="uk" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="button button--header button--sm" href="calendar.html">
+            book now
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hut-banner section overlay">
+        <h1 class="hut-banner__title">The Hut</h1>
+      </section>
+
+      <section class="hut-features section">
+        <div class="container">
+          <div class="hut-features__inner padding">
+            <div class="hut-features__slider swiper">
+              <div class="hut-features__wrapper swiper-wrapper">
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/outside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/outside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/outside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/outside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/outside.jpg" alt="" />
+                </div>
+              </div>
+              <div class="hut-features__slider-nav">
+                <div class="hut-features__btn-prev swiper-button-prev">
+                  <svg
+                    width="35"
+                    height="17"
+                    viewBox="0 0 35 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M33.414 9.18187H1.65293C1.31098 9.18187 1.03345 8.87642 1.03345 8.50006C1.03345 8.12369 1.31098 7.81824 1.65293 7.81824H33.414C33.7559 7.81824 34.0334 8.12369 34.0334 8.50006C34.0334 8.87642 33.7559 9.18187 33.414 9.18187Z"
+                      fill="#333333"
+                    />
+                    <path
+                      d="M8.87947 16C8.80211 16 8.72475 15.9718 8.66552 15.916L1.08824 8.70203C1.03203 8.64794 1 8.57487 1 8.49835C1 8.42182 1.03203 8.34875 1.08824 8.29467L8.66612 1.08415C8.78398 0.971951 8.97557 0.971951 9.09343 1.08415C9.21128 1.19634 9.21128 1.37874 9.09343 1.49093L1.7295 8.49835L9.09343 15.5086C9.21128 15.6208 9.21128 15.8032 9.09343 15.9154C9.0342 15.9718 8.95683 16 8.87947 16Z"
+                      stroke="#333333"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </div>
+                <div class="hut-features__btn-next swiper-button-next">
+                  <svg
+                    width="35"
+                    height="17"
+                    viewBox="0 0 35 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.58604 9.18187H33.3471C33.689 9.18187 33.9666 8.87642 33.9666 8.50006C33.9666 8.12369 33.689 7.81824 33.3471 7.81824H1.58604C1.24408 7.81824 0.966553 8.12369 0.966553 8.50006C0.966553 8.87642 1.24408 9.18187 1.58604 9.18187Z"
+                      fill="#333333"
+                    />
+                    <path
+                      d="M26.1205 16C26.1979 16 26.2753 15.9718 26.3345 15.916L33.9118 8.70203C33.968 8.64794 34 8.57487 34 8.49835C34 8.42182 33.968 8.34875 33.9118 8.29467L26.3339 1.08415C26.216 0.971951 26.0244 0.971951 25.9066 1.08415C25.7887 1.19634 25.7887 1.37874 25.9066 1.49093L33.2705 8.49835L25.9066 15.5086C25.7887 15.6208 25.7887 15.8032 25.9066 15.9154C25.9658 15.9718 26.0432 16 26.1205 16Z"
+                      fill="#333333"
+                      stroke="#333333"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </div>
+                <span class="swiper__start-number">01</span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper__end-number">05</span>
+              </div>
+            </div>
+            <div class="hut-features__content">
+              <h2 class="hut-features__title">The Outside</h2>
+              <div class="hut-features__tabs tab-wrapper">
+                <div class="hut-features__btn-box">
+                  <button
+                    data-tab-id="hot-tube"
+                    class="hut-features__button tab tab-active"
+                  >
+                    Hot tube
+                  </button>
+                  <button
+                    data-tab-id="electric"
+                    class="hut-features__button tab"
+                  >
+                    Electric car charge
+                  </button>
+                </div>
+                <div class="hut-features__content-box">
+                  <div
+                    id="hot-tube"
+                    class="hut-features__text tab-content tab-content-active"
+                  >
+                    Løvtag’s three exclusive and comfortable cabins, Et, Ro and
+                    Ly, are designed by architect Sigurd Larsen. They all have
+                    an open space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                  <div id="electric" class="hut-features__text tab-content">
+                    three exclusive and comfortable cabins, Et, Ro and Ly, are
+                    designed by architect Sigurd Larsen. They all have an open
+                    space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hut-features section">
+        <div class="container">
+          <div class="hut-features__inner padding">
+            <div class="hut-features__content">
+              <h2 class="hut-features__title">The Outside</h2>
+              <div class="hut-features__tabs tab-wrapper">
+                <div class="hut-features__btn-box">
+                  <button
+                    data-tab-id="space"
+                    class="hut-features__button tab tab-active"
+                  >
+                    Space
+                  </button>
+                  <button
+                    data-tab-id="kitchen"
+                    class="hut-features__button tab"
+                  >
+                    Kitchen
+                  </button>
+                  <button
+                    data-tab-id="bathroom"
+                    class="hut-features__button tab"
+                  >
+                    Bathroom
+                  </button>
+                </div>
+                <div class="hut-features__content-box">
+                  <div
+                    id="space"
+                    class="hut-features__text tab-content tab-content-active"
+                  >
+                    Løvtag’s three exclusive and comfortable cabins, Et, Ro and
+                    Ly, are designed by architect Sigurd Larsen. They all have
+                    an open space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                  <div id="kitchen" class="hut-features__text tab-content">
+                    three exclusive and comfortable cabins, Et, Ro and Ly, are
+                    designed by architect Sigurd Larsen. They all have an open
+                    space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                  <div id="bathroom" class="hut-features__text tab-content">
+                    designed by architect Sigurd Larsen. They all have an open
+                    space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hut-features__slider right-sided swiper">
+              <div class="hut-features__wrapper swiper-wrapper">
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/inside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/inside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/inside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/inside.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/inside.jpg" alt="" />
+                </div>
+              </div>
+              <div class="hut-features__slider-nav">
+                <div class="hut-features__btn-prev swiper-button-prev">
+                  <svg
+                    width="35"
+                    height="17"
+                    viewBox="0 0 35 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M33.414 9.18187H1.65293C1.31098 9.18187 1.03345 8.87642 1.03345 8.50006C1.03345 8.12369 1.31098 7.81824 1.65293 7.81824H33.414C33.7559 7.81824 34.0334 8.12369 34.0334 8.50006C34.0334 8.87642 33.7559 9.18187 33.414 9.18187Z"
+                      fill="#333333"
+                    />
+                    <path
+                      d="M8.87947 16C8.80211 16 8.72475 15.9718 8.66552 15.916L1.08824 8.70203C1.03203 8.64794 1 8.57487 1 8.49835C1 8.42182 1.03203 8.34875 1.08824 8.29467L8.66612 1.08415C8.78398 0.971951 8.97557 0.971951 9.09343 1.08415C9.21128 1.19634 9.21128 1.37874 9.09343 1.49093L1.7295 8.49835L9.09343 15.5086C9.21128 15.6208 9.21128 15.8032 9.09343 15.9154C9.0342 15.9718 8.95683 16 8.87947 16Z"
+                      stroke="#333333"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </div>
+                <div class="hut-features__btn-next swiper-button-next">
+                  <svg
+                    width="35"
+                    height="17"
+                    viewBox="0 0 35 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.58604 9.18187H33.3471C33.689 9.18187 33.9666 8.87642 33.9666 8.50006C33.9666 8.12369 33.689 7.81824 33.3471 7.81824H1.58604C1.24408 7.81824 0.966553 8.12369 0.966553 8.50006C0.966553 8.87642 1.24408 9.18187 1.58604 9.18187Z"
+                      fill="#333333"
+                    />
+                    <path
+                      d="M26.1205 16C26.1979 16 26.2753 15.9718 26.3345 15.916L33.9118 8.70203C33.968 8.64794 34 8.57487 34 8.49835C34 8.42182 33.968 8.34875 33.9118 8.29467L26.3339 1.08415C26.216 0.971951 26.0244 0.971951 25.9066 1.08415C25.7887 1.19634 25.7887 1.37874 25.9066 1.49093L33.2705 8.49835L25.9066 15.5086C25.7887 15.6208 25.7887 15.8032 25.9066 15.9154C25.9658 15.9718 26.0432 16 26.1205 16Z"
+                      fill="#333333"
+                      stroke="#333333"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </div>
+                <span class="swiper__start-number">01</span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper__end-number">05</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hut-features section">
+        <div class="container">
+          <div class="hut-features__inner padding">
+            <div class="hut-features__slider swiper">
+              <div class="hut-features__wrapper swiper-wrapper">
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/practicalities.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/practicalities.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/practicalities.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/practicalities.jpg" alt="" />
+                </div>
+                <div class="hut-features__slider-item swiper-slide">
+                  <img src="./img/practicalities.jpg" alt="" />
+                </div>
+              </div>
+              <div class="hut-features__slider-nav">
+                <div class="hut-features__btn-prev swiper-button-prev">
+                  <svg
+                    width="35"
+                    height="17"
+                    viewBox="0 0 35 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M33.414 9.18187H1.65293C1.31098 9.18187 1.03345 8.87642 1.03345 8.50006C1.03345 8.12369 1.31098 7.81824 1.65293 7.81824H33.414C33.7559 7.81824 34.0334 8.12369 34.0334 8.50006C34.0334 8.87642 33.7559 9.18187 33.414 9.18187Z"
+                      fill="#333333"
+                    />
+                    <path
+                      d="M8.87947 16C8.80211 16 8.72475 15.9718 8.66552 15.916L1.08824 8.70203C1.03203 8.64794 1 8.57487 1 8.49835C1 8.42182 1.03203 8.34875 1.08824 8.29467L8.66612 1.08415C8.78398 0.971951 8.97557 0.971951 9.09343 1.08415C9.21128 1.19634 9.21128 1.37874 9.09343 1.49093L1.7295 8.49835L9.09343 15.5086C9.21128 15.6208 9.21128 15.8032 9.09343 15.9154C9.0342 15.9718 8.95683 16 8.87947 16Z"
+                      stroke="#333333"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </div>
+                <div class="hut-features__btn-next swiper-button-next">
+                  <svg
+                    width="35"
+                    height="17"
+                    viewBox="0 0 35 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.58604 9.18187H33.3471C33.689 9.18187 33.9666 8.87642 33.9666 8.50006C33.9666 8.12369 33.689 7.81824 33.3471 7.81824H1.58604C1.24408 7.81824 0.966553 8.12369 0.966553 8.50006C0.966553 8.87642 1.24408 9.18187 1.58604 9.18187Z"
+                      fill="#333333"
+                    />
+                    <path
+                      d="M26.1205 16C26.1979 16 26.2753 15.9718 26.3345 15.916L33.9118 8.70203C33.968 8.64794 34 8.57487 34 8.49835C34 8.42182 33.968 8.34875 33.9118 8.29467L26.3339 1.08415C26.216 0.971951 26.0244 0.971951 25.9066 1.08415C25.7887 1.19634 25.7887 1.37874 25.9066 1.49093L33.2705 8.49835L25.9066 15.5086C25.7887 15.6208 25.7887 15.8032 25.9066 15.9154C25.9658 15.9718 26.0432 16 26.1205 16Z"
+                      fill="#333333"
+                      stroke="#333333"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </div>
+                <span class="swiper__start-number">01</span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper__end-number">05</span>
+              </div>
+            </div>
+            <div class="hut-features__content">
+              <h2 class="hut-features__title">The Outside</h2>
+              <div class="hut-features__tabs tab-wrapper">
+                <div class="hut-features__btn-box">
+                  <button
+                    data-tab-id="breakfast"
+                    class="hut-features__button tab tab-active"
+                  >
+                    Breakfast
+                  </button>
+                  <button
+                    data-tab-id="classic-dinner"
+                    class="hut-features__button tab"
+                  >
+                    Classic Dinner
+                  </button>
+                </div>
+                <div class="hut-features__content-box">
+                  <div
+                    id="breakfast"
+                    class="hut-features__text tab-content tab-content-active"
+                  >
+                    Løvtag’s three exclusive and comfortable cabins, Et, Ro and
+                    Ly, are designed by architect Sigurd Larsen. They all have
+                    an open space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                  <div
+                    id="classic-dinner"
+                    class="hut-features__text tab-content"
+                  >
+                    three exclusive and comfortable cabins, Et, Ro and Ly, are
+                    designed by architect Sigurd Larsen. They all have an open
+                    space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__subscription">
+            <p>Newsletter</p>
+            <form class="sub-form" action="#">
+              <input
+                class="sub-form__input"
+                placeholder="Email Address"
+                type="text"
+              />
+              <button class="sub-form__submit" type="submit">
+                <svg
+                  class="sub-form__arrow"
+                  width="34"
+                  height="17"
+                  viewBox="0 0 34 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.619484 9.18175h22.3805C32.7225 9.18175 33 8.8763 33 8.49993C33 8.12357 32.7225 7.81812 32.3805 7.81812H0.619484C0.277527 7.81812 0 8.12357 0 8.49993C0 8.8763 0.277527 9.18175 0.619484 9.18175Z"
+                    fill="#EFEFEF"
+                  />
+                  <path
+                    d="M25.1541 16C25.2315 16 25.3088 15.9718 25.3681 15.916L32.9453 8.70203C33.0015 8.64794 33.0336 8.57487 33.0336 8.49835C33.0336 8.42182 33.0015 8.34875 32.9453 8.29467L25.3674 1.08415C25.2496 0.971951 25.058 0.971951 24.9401 1.08415C24.8223 1.19634 24.8223 1.37874 24.9401 1.49093L32.3041 8.49835L24.9401 15.5086C24.8223 15.6208 24.8223 15.8032 24.9401 15.9154C24.9994 15.9718 25.0767 16 25.1541 16Z"
+                    fill="#EFEFEF"
+                    stroke="#EFEFEF"
+                    stroke-width="0.681818"
+                  />
+                </svg>
+              </button>
+            </form>
+            <p>
+              Sign up to our newsletter for special things and receive 10% off
+              your next order.
+            </p>
+            <p>© 2021 The Glass Huts</p>
+          </div>
+          <div class="footer__info">
+            <ul class="footer__policy-list">
+              <li class="footer__policy-item">
+                <a href="#">TERMS AND CONDITIONS</a>
+              </li>
+              <li class="footer__policy-item">
+                <a href="#">CANCELLATION POLICY</a>
+              </li>
+              <li class="footer__policy-item">
+                <a href="#">PRIVACY POLICY</a>
+              </li>
+            </ul>
+            <ul class="footer__payment-list">
+              <li class="footer__payment-item">
+                <svg>
+                  <use xlink:href="img/sprite.svg#paypal"></use>
+                </svg>
+              </li>
+              <li class="footer__payment-item">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mastercard"></use>
+                </svg>
+              </li>
+              <li class="footer__payment-item">
+                <svg>
+                  <use xlink:href="img/sprite.svg#visa"></use>
+                </svg>
+              </li>
+              <li class="footer__payment-item">
+                <svg>
+                  <use xlink:href="img/sprite.svg#bank"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

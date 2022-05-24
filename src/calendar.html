@@ -17,29 +17,30 @@
   </head>
   <body>
     <div class="calendar">
-      <div class="calendar__top">
-        <form class="calendar__date-picker datepicker">
-          <div class="calendar__check-in">
+      <form class="calendar__date-picker datepicker">
+        <div class="datepicker__inputs">
+          <div class="datepicker__check-in">
             <span><label for="check-in">Check-in</label></span>
             <input name="check-in" id="check-in" placeholder="Add dates" />
           </div>
 
-          <div class="calendar__check-out">
+          <div class="datepicker__check-out">
             <span><label for="check-out">Check-in</label></span>
             <input name="check-out" id="check-out" placeholder="Add dates" />
           </div>
 
-          <div class="calendar__guests">
+          <div class="datepicker__guests">
             <span>Guests</span>
-            <div class="calendar__quantity">
-              <span class="calendar__minus-btn">-</span>
-              <span class="calendar__quantity-value">1</span>
-              <span class="calendar__plus-btn">+</span>
+            <div class="datepicker__quantity">
+              <span class="datepicker__minus-btn">-</span>
+              <span class="datepicker__quantity-value">1</span>
+              <span class="datepicker__plus-btn">+</span>
             </div>
           </div>
-          <button type="submit" class="calendar__button button">BOOK</button>
-        </form>
-      </div>
+        </div>
+
+        <button type="submit" class="datepicker__button button">BOOK</button>
+      </form>
 
       <div class="calendar__bottom">
         <div class="calendar__month month current-month">

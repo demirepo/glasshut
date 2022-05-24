@@ -9,7 +9,7 @@
     "plugin/declaration-block-no-ignored-properties": true,
     "indentation": 2,
     "selector-class-pattern": null,
-    "string-quotes": "double",
+    "string-quotes": "single",
     "no-duplicate-selectors": true,
     "color-hex-case": "lower",
     "color-hex-length": "short",

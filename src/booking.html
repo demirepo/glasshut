@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,19 +14,22 @@
       rel="stylesheet"
     />
     <script defer src="./js/main.min.js"></script>
+
     <title>Booking</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="header__logo" href="#">
+          <a class="header__logo" href="index.html">
             <img class="header__logo-img" src="img/logo.svg" alt="logo" />
           </a>
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__link menu__link--active" href="#"> home </a>
+                <a class="menu__link menu__link--active" href="index.html">
+                  home
+                </a>
               </li>
               <li class="menu__list-item">
                 <a class="menu__link" href="#"> the hut </a>
@@ -34,10 +38,10 @@
                 <a class="menu__link" href="#"> the area </a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__link" href="#">booking</a>
+                <a class="menu__link" href="booking.html">booking</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__link" href="#"> about us </a>
+                <a class="menu__link" href="aboutus.html"> about us </a>
               </li>
               <li class="menu__list-item">
                 <a class="menu__link" href="#"> faq </a>
@@ -49,88 +53,261 @@
               </li>
             </ul>
           </nav>
-          <button class="button button--header" href="calendar.html">
+          <button class="button button--header button--sm" href="calendar.html">
             book now
           </button>
         </div>
       </div>
     </header>
 
-    <section class="banner section">
-      <h1>Booking</h1>
-      <span class="banner__location">Vesterborg, Denmark</span>
-    </section>
+    <main class="main">
+      <section class="booking-banner overlay section">
+        <h1>Booking</h1>
+        <span class="banner__location">Vesterborg, Denmark</span>
+      </section>
 
-    <section class="booking">
-      <div class="container">
-        <div class="booking__inner">
-          <div class="booking__services">
-            <h2>Choose Additional Services</h2>
-            <div class="booking__accordeon">
-              <div class="booking__accordeon-item"></div>
+      <section class="booking">
+        <div class="container">
+          <div class="booking__inner">
+            <div class="booking__services">
+              <h2>Choose Additional Services</h2>
+              <form class="booking__accordeon spoiler" action="">
+                <div data-spoiler class="spoiler__item">
+                  <div class="spoiler__visible">
+                    <div class="spoiler__checkbox">
+                      <input
+                        class="custom-checkbox visually-hidden"
+                        type="checkbox"
+                        name="group"
+                        id="first"
+                        placeholder="input"
+                      />
+                      <label class="checkbox-label" for="first"> </label>
+                      <div class="spoiler__item-title">
+                        <p>Fresh Breakfast for one</p>
+                        <p>400kr</p>
+                      </div>
+                    </div>
+                    <img
+                      data-trigger
+                      class="spoiler__item-arrow"
+                      src="./../img/accordeon-arrow-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="spoiler__expandable">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque, odio voluptatem culpa, quibusdam sit fugiat
+                      perspiciatis quisquam aspernatur a velit tenetur?
+                      Quibusdam in natus doloribus eveniet,
+                    </p>
+                  </div>
+                </div>
+                <div data-spoiler class="spoiler__item">
+                  <div class="spoiler__visible">
+                    <div class="spoiler__checkbox">
+                      <input
+                        class="custom-checkbox visually-hidden"
+                        type="checkbox"
+                        name="group"
+                        id="second"
+                        placeholder="input"
+                      />
+                      <label class="checkbox-label" for="second"> </label>
+                      <div class="spoiler__item-title">
+                        <p>Fresh Breakfast for one</p>
+                        <p>400kr</p>
+                      </div>
+                    </div>
+                    <img
+                      data-trigger
+                      class="spoiler__item-arrow"
+                      src="./../img/accordeon-arrow-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="spoiler__expandable">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque, odio voluptatem culpa, quibusdam sit fugiat
+                      perspiciatis quisquam aspernatur a velit tenetur?
+                      Quibusdam in natus doloribus eveniet,
+                    </p>
+                  </div>
+                </div>
+                <div data-spoiler class="spoiler__item">
+                  <div class="spoiler__visible">
+                    <div class="spoiler__checkbox">
+                      <input
+                        class="custom-checkbox visually-hidden"
+                        type="checkbox"
+                        name="group"
+                        id="forth"
+                        placeholder="input"
+                      />
+                      <label class="checkbox-label" for="forth"> </label>
+                      <div class="spoiler__item-title">
+                        <p>Fresh Breakfast for one</p>
+                        <p>400kr</p>
+                      </div>
+                    </div>
+                    <img
+                      data-trigger
+                      class="spoiler__item-arrow"
+                      src="./../img/accordeon-arrow-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="spoiler__expandable">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque, odio voluptatem culpa, quibusdam sit fugiat
+                      perspiciatis quisquam aspernatur a velit tenetur?
+                      Quibusdam in natus doloribus eveniet,
+                    </p>
+                  </div>
+                </div>
+                <div data-spoiler class="spoiler__item">
+                  <div class="spoiler__visible">
+                    <div class="spoiler__checkbox">
+                      <input
+                        class="custom-checkbox visually-hidden"
+                        type="checkbox"
+                        name="group"
+                        id="third"
+                        placeholder="input"
+                      />
+                      <label class="checkbox-label" for="third"> </label>
+                      <div class="spoiler__item-title">
+                        <p>Fresh Breakfast for one</p>
+                        <p>400kr</p>
+                      </div>
+                    </div>
+                    <img
+                      data-trigger
+                      class="spoiler__item-arrow"
+                      src="./../img/accordeon-arrow-down.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="spoiler__expandable">
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque, odio voluptatem culpa, quibusdam sit fugiat
+                      perspiciatis quisquam aspernatur a velit tenetur?
+                      Quibusdam in natus doloribus eveniet,
+                    </p>
+                  </div>
+                </div>
+              </form>
+              <div class="booking__info">
+                <h2>Hut rules</h2>
+                <div class="booking__hr hr hr"></div>
+                <p>Check-in: 2:00 PM - 11:00 PM</p>
+                <br />
+                <p>Checkout: 11:00 AM</p>
+                <br />
+                <p>Not suitable for children and infants</p>
+                <br />
+                <p>No smoking No pets</p>
+                <h2>Cancellation policy</h2>
+                <div class="booking__hr hr"></div>
+                <p>Free cancellation until 1:00 PM on Mar 27</p>
+                <br />
+                <p>
+                  After that, cancel before 2:00 PM on Apr 1 and get a 50%
+                  refund, minus the first night and service fee.
+                </p>
+                <h2>Important Information</h2>
+                <div class="booking__hr hr"></div>
+                <p>
+                  You need to hike a steep hill to arrive at the treehouses, it
+                  takes approx 20-30 minutes on a trail with stairs and uneven
+                  ground.
+                </p>
+              </div>
             </div>
-            <div class="booking__info">
-              <h2>Hut rules</h2>
-              <hr />
-              <p>Check-in: 2:00 PM - 11:00 PM</p>
-              <p>Checkout: 11:00 AM</p>
-              <p>Not suitable for children and infants</p>
-              <p>No smoking No pets</p>
-              <h2>Cancellation policy</h2>
-              <hr />
-              <p>Free cancellation until 1:00 PM on Mar 27</p>
-              <p>
-                After that, cancel before 2:00 PM on Apr 1 and get a 50%
-                refund, minus the first night and service fee.
-              </p>
-              <h2>Important Information</h2>
-              <hr />
-              <p>
-                You need to hike a steep hill to arrive at the treehouses, it
-                takes approx 20-30 minutes on a trail with stairs and uneven
-                ground.
-              </p>
+
+            <div class="booking__checkout">
+              <div class="booking__price">
+                <span class="booking__price-value">3.200kr</span> / night
+              </div>
+              <form class="booking__datepicker datepicker">
+                <div class="datepicker__inputs">
+                  <div class="datepicker__check-in">
+                    <span><label for="check-in">Check-in</label></span>
+                    <input
+                      name="check-in"
+                      id="check-in"
+                      placeholder="Add dates"
+                    />
+                  </div>
+
+                  <div class="datepicker__check-out">
+                    <span><label for="check-out">Check-in</label></span>
+                    <input
+                      name="check-out"
+                      id="check-out"
+                      placeholder="Add dates"
+                    />
+                  </div>
+
+                  <div class="datepicker__guests">
+                    <span>Guests</span>
+                    <div class="datepicker__quantity">
+                      <span class="datepicker__minus-btn">-</span>
+                      <span class="datepicker__quantity-value">1</span>
+                      <span class="datepicker__plus-btn">+</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="datepicker__button button">
+                  BOOK
+                </button>
+              </form>
+              <ul class="booking__options">
+                <li class="booking__options-item">
+                  <span class="booking__option-desc">3.200kr x 2 nights</span>
+                  <span class="booking__option-price"> 6.400kr</span>
+                </li>
+                <li class="booking__options-item">
+                  <span class="booking__option-desc"
+                    >Classic Dinner for one</span
+                  >
+                  <span class="booking__option-price"> 600kr</span>
+                </li>
+                <li class="booking__options-item">
+                  <span class="booking__option-desc">Electric Car Charge</span>
+                  <span class="booking__option-price"> 800kr</span>
+                </li>
+                <li class="booking__options-discount">
+                  <span class="booking__option-desc">10% discount</span>
+                  <span class="booking__option-price"> -200kr</span>
+                </li>
+              </ul>
+              <div class="hr"></div>
+              <div class="booking__total">
+                <span>Total</span
+                ><span class="booking__total-value">7.000kr</span>
+              </div>
+              <form class="booking__coupon">
+                <input
+                  class="booking__coupon-code"
+                  placeholder="Coupon code"
+                  type="text"
+                />
+                <button class="booking__apply button" type="submit">
+                  APPLY
+                </button>
+              </form>
             </div>
           </div>
-
-          <div class="booking__checkout">
-            <div class="booking__price"><span>3.200kr</span>
-              / night</div>
-            <div class="booking__datepicker"></div>
-            <button class="button">BOOK</button>
-            <ul class="booking__options">
-              <li class="booking__options-item">
-                <div class="booking__option-desc">3.200kr x 2 nights</div>
-                <div class="booking__option-price"> 6.400kr</div>
-              </li>
-              <li class="booking__options-item">
-                <div class="booking__option-desc">Classic Dinner for one</div>
-                <div class="booking__option-price"> 600kr</div>
-              </li>
-              <li class="booking__options-item">
-                <div class="booking__option-desc">Electric Car Charge</div>
-                <div class="booking__option-price"> 800kr</div>
-              </li>
-              <li class="booking__options-discount">
-                <div class="booking__option-desc">10% discount</div>
-                <div class="booking__option-price"> -200kr</div>
-              </li>
-
-            </ul>
-            <hr />
-            <div class="booking__total">
-              <span>Total</span><span>7.000kr</span>
-            </div>
-            <form class="booking__coupon">
-              <input class="booking__coupon-code" type="text" />
-              <button class="booking__apply" type="submit">APPLY</button>
-            </form>
-          </div>
-
         </div>
-      </div>
-      <a class="booking__read-faq button button--faq" href="#">read faq</a>
-    </section>
+        <a class="booking__faq-button button button--sm" href="#">read faq</a>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -180,7 +357,7 @@
                 <a href="#">CANCELLATION POLICY</a>
               </li>
               <li class="footer__policy-item">
-                <a href="#"></a>PRIVACY POLICY
+                <a href="#">PRIVACY POLICY</a>
               </li>
             </ul>
             <ul class="footer__payment-list">
@@ -209,7 +386,5 @@
         </div>
       </div>
     </footer>
-
   </body>
-  </div>
 </html>

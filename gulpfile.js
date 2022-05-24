@@ -9,7 +9,7 @@ const del = require("del");
 
 function styles() {
   return src(["src/css/normalize.css", "src/scss/style.scss"])
-    .pipe(scss({ outputStyle: "compressed" })) //nested, expanded, compact, compressed
+    .pipe(scss({ outputStyle: "expanded" })) //nested, expanded, compact, compressed
     .pipe(concat("style.min.css"))
     .pipe(
       autoprefixer({
