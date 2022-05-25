@@ -12,8 +12,17 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script
+      defer
+      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+    ></script>
     <script defer src="./js/main.min.js"></script>
-    <title>Booking</title>
+    <title>About Us</title>
   </head>
   <body>
     <header class="header">
@@ -60,9 +69,11 @@
 
     <main class="main">
       <section class="about-banner section overlay">
-        <h1 class="about-banner__title">About us</h1>
-        <a class="about-banner__link" href="#">contact us</a>
-        <a class="about-banner__link" href="#">read faq</a>
+        <h1 class="about-banner__title">About Us</h1>
+        <a class="banner__button-link" href="#" role="button">contact us</a>
+        <a class="banner__button-link" href="faq.html" role="button"
+          >read faq</a
+        >
       </section>
 
       <section class="about-info section">
@@ -177,36 +188,50 @@
               </ul>
             </div>
             <form class="about-contacts__form">
-              <input
-                class="about-contacts__firstname"
-                name="firstname"
-                placeholder="First Name"
-                type="text"
-              />
-              <input
-                class="about-contacts__lastname"
-                name="lastname"
-                placeholder="Last Name"
-                type="text"
-              />
-              <input
-                class="about-contacts__email"
-                name="email"
-                placeholder="Email"
-                type="text"
-              />
-              <input
-                class="about-contacts__subject"
-                name="subject"
-                placeholder="Subject"
-                type="text"
-              />
-              <textarea
-                class="about-contacts__message"
-                name="message"
-                placeholder="Message"
-                type="text"
-              ></textarea>
+              <div class="about-contacts__input-box">
+                <input
+                  class="about-contacts__firstname"
+                  name="firstname"
+                  type="text"
+                  required
+                />
+                <span class="about-contacts__label">First Name</span>
+              </div>
+
+              <div class="about-contacts__input-box">
+                <input
+                  class="about-contacts__lastname"
+                  name="lastname"
+                  type="text"
+                  required
+                /><span class="about-contacts__label">Last Name</span>
+              </div>
+
+              <div class="about-contacts__input-box">
+                <input
+                  class="about-contacts__email"
+                  name="email"
+                  type="text"
+                  required
+                /><span class="about-contacts__label">Email</span>
+              </div>
+              <div class="about-contacts__input-box">
+                <input
+                  class="about-contacts__subject"
+                  name="subject"
+                  type="text"
+                  required
+                /><span class="about-contacts__label">Subject</span>
+              </div>
+              <div class="about-contacts__input about-contacts__textarea">
+                <textarea
+                  class="about-contacts__message"
+                  name="message"
+                  type="text"
+                  required
+                ></textarea
+                ><span class="about-contacts__label">Message</span>
+              </div>
               <button
                 class="about-contacts__button button button--sm"
                 type="submit"

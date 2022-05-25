@@ -4,8 +4,6 @@
 
 /*  --- COLORS --- */
 $primary: #5b6460;
-
-// $primary: #f00;
 $secondary: #808e88;
 $bg-primary: #fff;
 $bg-secondary: #e9ece0;
@@ -80,12 +78,14 @@ hr {
 
 h1 {
   margin: 0;
+  margin-bottom: 15px;
   color: $bg-primary;
   font-weight: $fw-light;
   font-style: normal;
   font-size: 70px;
   font-family: 'Open Sans', sans-serif;
   line-height: 72px;
+  text-align: center;
 }
 
 h2 {
@@ -98,13 +98,28 @@ h2 {
   line-height: 40px;
 }
 
+h3 {
+  margin-bottom: 32px;
+  color: $primary;
+  font-weight: $fw-normal;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 36px;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   color: $black;
   font-weight: $fw-light;
   font-size: $fz-sm;
   font-family: 'Open Sans', sans-serif;
   line-height: 30px;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -153,6 +168,60 @@ body {
   margin-bottom: var(--big-interval);
 }
 
+.banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  padding-top: 70px;
+  background: #baa1b4 url('./../img/booking.jpg') no-repeat 50% 50% / cover;
+  text-align: center;
+
+  & h1 {
+    position: relative;
+  }
+
+  &__location {
+    position: relative;
+    display: block;
+    margin-bottom: 64px;
+    color: $bg-primary;
+    font-size: $fz-l;
+    line-height: 24px;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: '';
+      position: relative;
+      top: 4px;
+      left: -3px;
+      display: inline-block;
+      width: 15px;
+      height: 24px;
+      background: url('./../img/location.svg') no-repeat 50% 50%;
+    }
+  }
+
+  &__button-link {
+    position: relative;
+    display: inline-block;
+    min-width: 175px;
+    margin-bottom: 15px;
+    padding: 12px 45px;
+    border: 1px solid $bg-primary;
+    color: $bg-primary;
+    text-transform: uppercase;
+
+    & + & {
+      margin-left: 24px;
+    }
+  }
+}
+
 .button {
   padding: 13px;
   border: none;
@@ -175,6 +244,7 @@ body {
   &.button--sm {
     width: 200px;
     height: 60px;
+    color: $bg-primary;
     font-size: $fz-sm;
   }
 }
@@ -511,7 +581,7 @@ body {
   }
 
   &__button {
-    position: absolute;
+    position: absolutfe;
     top: 50%;
     left: 50%;
     display: flex;
@@ -1006,42 +1076,7 @@ body {
 /* #region  --- BOOKING --- */
 
 .booking-banner {
-  position: relative;
-  width: 100%;
-  height: 350px;
-  padding-top: 70px;
   background: #baa1b4 url('./../img/booking.jpg') no-repeat 50% 50% / cover;
-  text-align: center;
-
-  & h1 {
-    position: relative;
-    margin-bottom: 15px;
-    font-weight: $fw-light;
-    font-size: 70px;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 72px;
-    letter-spacing: 0;
-    text-align: center;
-  }
-
-  span {
-    position: relative;
-    display: inline-block;
-    color: $bg-primary;
-    font-size: $fz-l;
-    line-height: 24px;
-    text-decoration: underline;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: -20px;
-      display: inline-block;
-      width: 15px;
-      height: 24px;
-      background: url('./../img/location.svg') no-repeat 50% 50%;
-    }
-  }
 }
 
 .booking {
@@ -1076,7 +1111,7 @@ body {
     color: $grey1;
     font-weight: $fw-normal;
     font-size: $fz-m;
-    line-height: 18px;
+    line-height: 28px;
 
     & h2 {
       margin-top: 100px;
@@ -1159,7 +1194,6 @@ body {
     position: relative;
     left: 50%;
     margin: var(--mid-interval) 0;
-    font-size: $fz-sm;
     transform: translateX(-50%);
   }
 }
@@ -1186,18 +1220,6 @@ body {
 
   &__title {
     margin-bottom: 90px;
-  }
-
-  &__link {
-    display: inline-block;
-    min-width: 175px;
-    padding: 12px 45px;
-    border: 1px solid $bg-primary;
-    text-transform: uppercase;
-
-    & + & {
-      margin-left: 24px;
-    }
   }
 }
 
@@ -1291,70 +1313,99 @@ body {
 .about-contacts {
   &__inner {
     display: flex;
+    justify-content: space-between;
     padding-left: var(--big-interval);
   }
 
   &__content {
-    flex-basis: 30%;
+    flex-basis: 40%;
   }
 
   &__form {
     display: flex;
     flex-basis: 60%;
     flex-wrap: wrap;
-    align-items: start;
-    justify-content: start;
+    gap: 24px;
+    align-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     border-color: $primary;
     font-weight: $fw-normal;
     font-size: $fz-m;
     line-height: 18px;
   }
 
-  &__firstname,
-  &__lastname,
-  &__email,
-  &__subject {
+  &__textarea {
+    position: relative;
     flex-grow: 1;
-    min-height: 50px;
-    margin-bottom: 25px;
-    padding: 0 25px;
-  }
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    border: 1px solid #000;
 
-  &__firstname {
-    flex-basis: 45%;
-  }
+    & textarea {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border: none;
+      outline: none;
+    }
 
-  &__lastname {
-    flex-basis: 45%;
-    margin-left: 24px;
-  }
-
-  &__email,
-  &__subject,
-  &__message {
-    flex-grow: 1;
-    flex-basis: 100%;
+    & textarea:focus + span,
+    & textarea:valid + span {
+      font-size: 8px;
+      transform: translateY(-23px);
+    }
   }
 
   &__message {
+    width: 100%;
     min-height: 125px;
     margin-bottom: 25px;
     padding: 15px 25px;
     resize: none;
   }
 
-  &__firstname,
-  &__lastname,
-  &__email,
-  &__subject,
-  &__message {
-    &::placeholder {
-      color: $grey3;
-    }
+  /* spare & here is for specificity increase */
 
-    &:focus::placeholder {
-      color: transparent;
+  & &__input-box {
+    position: relative;
+    flex: 1 0 45%;
+    min-width: 200px;
+    min-height: 50px;
+    padding: 0 25px;
+    border: 1px solid #000;
+
+    & input {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      padding: 0 15px;
+      border: none;
+      outline: none;
+
+      &:focus + span,
+      &:valid + span {
+        font-size: 8px;
+        transform: translateY(-23px);
+      }
     }
+  }
+
+  &__label {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    display: block;
+    margin: auto 0;
+    padding: 0 10px;
+    color: $grey3;
+    pointer-events: none;
+    transition: all 0.3s;
+    transform: translateY(-50%);
   }
 
   &__button {
@@ -1387,7 +1438,7 @@ body {
   }
 }
 
-.hut-features {
+.info-block {
   &__inner {
     display: flex;
   }
@@ -1460,7 +1511,16 @@ body {
 
   &__text {
     position: absolute;
-    inset: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: $grey1;
+    font-size: $fz-m;
+    line-height: 30px;
+  }
+
+  &__text.pos {
+    position: static;
   }
 }
 
@@ -1642,7 +1702,7 @@ body {
 
 /* -------------------------------------- */
 
-/* #endregion  --- SWIPER --- */
+/* #region  --- SWIPER --- */
 
 .swiper-pagination-bullet {
   width: 15px;
@@ -1657,12 +1717,12 @@ body {
   background-color: $grey1;
 }
 
-.hut-features__btn-prev.swiper-button-prev,
-.hut-features__btn-next.swiper-button-next {
+.info-block__btn-prev.swiper-button-prev,
+.info-block__btn-next.swiper-button-next {
   position: relative;
   display: inline-block;
+  width: auto;
   margin: 0;
-  line-height: auto;
   inset: 0;
 
   &::after {
@@ -1672,11 +1732,18 @@ body {
   & svg {
     position: relative;
     top: -7px;
+    fill: $grey1;
+    stroke: $grey1;
+    stroke-width: 0.68;
+  }
+
+  &:hover svg {
+    stroke-width: 1.5;
   }
 }
 
-.hut-features__btn-next.swiper-button-next {
-  margin-left: 47px;
+.info-block__btn-next.swiper-button-next {
+  margin-left: 40px;
 }
 
 .swiper-pagination.swiper-pagination {
@@ -1693,3 +1760,89 @@ body {
 /* #endregion  --- SWIPER --- */
 
 /* -------------------------------------- */
+
+/* #region  --- THE AREA --- */
+
+.area-outlines {
+  display: flex;
+  padding: calc(var(--big-interval) - $padding);
+
+  &__text {
+    display: grid;
+    margin: auto;
+    padding: 0 100px;
+  }
+}
+
+.area-map {
+  iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+/* #endregion  --- THE AREA --- */
+
+/* -------------------------------------- */
+
+/* #region  --- FAQ --- */
+
+.faq {
+  &__inner {
+    padding-left: calc(var(--big-interval));
+  }
+
+  &__accordeon {
+    max-width: 774px;
+    font-weight: $fw-normal;
+  }
+
+  &__spoiler-item {
+    margin-bottom: 24px;
+  }
+
+  &__trigger-bar {
+    min-height: 60px;
+    padding-left: 24px;
+    border: 0.7px solid $primary;
+    background-color: $bg-primary;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: $bg-secondary;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-right: 15px;
+    color: $grey1;
+    font-weight: $fw-normal;
+    font-size: $fz-l;
+    text-transform: uppercase;
+  }
+
+  &__expandable {
+    margin-top: 20px;
+    background-color: $bg-secondary;
+
+    .faq__title {
+      display: block;
+    }
+  }
+
+  &__expandable.spoiler__expandable p::after,
+  &__expandable.spoiler__expandable p::before {
+    content: '';
+    background-color: $bg-secondary;
+  }
+}
+
+/* #endregion  --- FAQ --- */

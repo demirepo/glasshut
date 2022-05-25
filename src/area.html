@@ -65,69 +65,42 @@
     </header>
 
     <main class="main">
-      <section class="hut-banner section overlay">
+      <section class="banner section overlay">
         <h1 class="hut-banner__title">The Area</h1>
+        <a class="banner__location">Vesterborg, Denmark</a>
+        <a class="banner__button-link" href="#" role="button">get directions</a>
       </section>
 
-      <section class="hut-features section">
+      <section class="info-block section">
         <div class="container">
-          <div class="hut-features__inner padding">
-            <div class="hut-features__slider swiper">
-              <div class="hut-features__wrapper swiper-wrapper">
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+          <div class="info-block__inner padding">
+            <div class="info-block__slider swiper">
+              <div class="info-block__wrapper swiper-wrapper">
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/vesterborg.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/vesterborg.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/vesterborg.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/vesterborg.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/vesterborg.jpg" alt="" />
                 </div>
               </div>
-              <div class="hut-features__slider-nav">
-                <div class="hut-features__btn-prev swiper-button-prev">
-                  <svg
-                    width="35"
-                    height="17"
-                    viewBox="0 0 35 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.414 9.18187H1.65293C1.31098 9.18187 1.03345 8.87642 1.03345 8.50006C1.03345 8.12369 1.31098 7.81824 1.65293 7.81824H33.414C33.7559 7.81824 34.0334 8.12369 34.0334 8.50006C34.0334 8.87642 33.7559 9.18187 33.414 9.18187Z"
-                      fill="#333333"
-                    />
-                    <path
-                      d="M8.87947 16C8.80211 16 8.72475 15.9718 8.66552 15.916L1.08824 8.70203C1.03203 8.64794 1 8.57487 1 8.49835C1 8.42182 1.03203 8.34875 1.08824 8.29467L8.66612 1.08415C8.78398 0.971951 8.97557 0.971951 9.09343 1.08415C9.21128 1.19634 9.21128 1.37874 9.09343 1.49093L1.7295 8.49835L9.09343 15.5086C9.21128 15.6208 9.21128 15.8032 9.09343 15.9154C9.0342 15.9718 8.95683 16 8.87947 16Z"
-                      stroke="#333333"
-                      stroke-width="0.681818"
-                    />
+              <div class="info-block__slider-nav">
+                <div class="info-block__btn-prev swiper-button-prev">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
                 </div>
-                <div class="hut-features__btn-next swiper-button-next">
-                  <svg
-                    width="35"
-                    height="17"
-                    viewBox="0 0 35 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.58604 9.18187H33.3471C33.689 9.18187 33.9666 8.87642 33.9666 8.50006C33.9666 8.12369 33.689 7.81824 33.3471 7.81824H1.58604C1.24408 7.81824 0.966553 8.12369 0.966553 8.50006C0.966553 8.87642 1.24408 9.18187 1.58604 9.18187Z"
-                      fill="#333333"
-                    />
-                    <path
-                      d="M26.1205 16C26.1979 16 26.2753 15.9718 26.3345 15.916L33.9118 8.70203C33.968 8.64794 34 8.57487 34 8.49835C34 8.42182 33.968 8.34875 33.9118 8.29467L26.3339 1.08415C26.216 0.971951 26.0244 0.971951 25.9066 1.08415C25.7887 1.19634 25.7887 1.37874 25.9066 1.49093L33.2705 8.49835L25.9066 15.5086C25.7887 15.6208 25.7887 15.8032 25.9066 15.9154C25.9658 15.9718 26.0432 16 26.1205 16Z"
-                      fill="#333333"
-                      stroke="#333333"
-                      stroke-width="0.681818"
-                    />
+                <div class="info-block__btn-next swiper-button-next">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
                   </svg>
                 </div>
                 <span class="swiper__start-number">01</span>
@@ -135,27 +108,91 @@
                 <span class="swiper__end-number">05</span>
               </div>
             </div>
-            <div class="hut-features__content">
-              <h2 class="hut-features__title">The Outside</h2>
-              <div class="hut-features__tabs tab-wrapper">
-                <div class="hut-features__btn-box">
+            <div class="info-block__content">
+              <h2 class="info-block__title">Vesterborg</h2>
+              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing...</h3>
+              <p class="info-block__text pos">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container section">
+        <div class="area-outlines">
+          <div class="area-outlines__text">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing...</h2>
+          </div>
+          <div class="area-outlines__img">
+            <img src="./img/area-map.png" alt="Denmark outlines" />
+          </div>
+        </div>
+      </div>
+
+      <section class="info-block section">
+        <div class="container">
+          <h2 class="padding section">Activities</h2>
+
+          <div class="info-block__inner padding">
+            <div class="info-block__slider swiper">
+              <div class="info-block__wrapper swiper-wrapper">
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-1.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-1.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-1.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-1.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="info-block__slider-nav">
+                <div class="info-block__btn-prev swiper-button-prev">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="info-block__btn-next swiper-button-next">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+                <span class="swiper__start-number">01</span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper__end-number">05</span>
+              </div>
+            </div>
+            <div class="info-block__content">
+              <h2 class="info-block__title">Restaurants & shopping</h2>
+              <div class="info-block__tabs tab-wrapper">
+                <div class="info-block__btn-box">
                   <button
-                    data-tab-id="hot-tube"
-                    class="hut-features__button tab tab-active"
+                    data-tab-id="rest-1"
+                    class="info-block__button tab tab-active"
                   >
-                    Hot tube
+                    Lorem Impus
                   </button>
-                  <button
-                    data-tab-id="electric"
-                    class="hut-features__button tab"
-                  >
-                    Electric car charge
+                  <button data-tab-id="rest-2" class="info-block__button tab">
+                    Lorem Impus
                   </button>
                 </div>
-                <div class="hut-features__content-box">
+                <div class="info-block__content-box">
                   <div
-                    id="hot-tube"
-                    class="hut-features__text tab-content tab-content-active"
+                    id="rest-1"
+                    class="info-block__text tab-content tab-content-active"
                   >
                     Løvtag’s three exclusive and comfortable cabins, Et, Ro and
                     Ly, are designed by architect Sigurd Larsen. They all have
@@ -164,7 +201,7 @@
                     surrounded by treetops, there is a terrace, which is about
                     nine meters above ground.
                   </div>
-                  <div id="electric" class="hut-features__text tab-content">
+                  <div id="rest-2" class="info-block__text tab-content">
                     three exclusive and comfortable cabins, Et, Ro and Ly, are
                     designed by architect Sigurd Larsen. They all have an open
                     space with a double bed, a double sofa bed, kitchen,
@@ -179,30 +216,27 @@
         </div>
       </section>
 
-      <section class="hut-features section">
+      <section class="info-block section">
         <div class="container">
-          <div class="hut-features__inner padding">
-            <div class="hut-features__content">
-              <h2 class="hut-features__title">The Outside</h2>
-              <div class="hut-features__tabs tab-wrapper">
-                <div class="hut-features__btn-box">
+          <div class="info-block__inner padding">
+            <div class="info-block__content">
+              <h2 class="info-block__title">Experiences in nature</h2>
+              <div class="info-block__tabs tab-wrapper">
+                <div class="info-block__btn-box">
                   <button
-                    data-tab-id="hot-tube"
-                    class="hut-features__button tab tab-active"
+                    data-tab-id="nature-1"
+                    class="info-block__button tab tab-active"
                   >
-                    Hot tube
+                    Lorem Impus
                   </button>
-                  <button
-                    data-tab-id="electric"
-                    class="hut-features__button tab"
-                  >
-                    Electric car charge
+                  <button data-tab-id="nature-2" class="info-block__button tab">
+                    Lorem Impus
                   </button>
                 </div>
-                <div class="hut-features__content-box">
+                <div class="info-block__content-box">
                   <div
-                    id="hot-tube"
-                    class="hut-features__text tab-content tab-content-active"
+                    id="nature-1"
+                    class="info-block__text tab-content tab-content-active"
                   >
                     Løvtag’s three exclusive and comfortable cabins, Et, Ro and
                     Ly, are designed by architect Sigurd Larsen. They all have
@@ -211,7 +245,7 @@
                     surrounded by treetops, there is a terrace, which is about
                     nine meters above ground.
                   </div>
-                  <div id="electric" class="hut-features__text tab-content">
+                  <div id="nature-2" class="info-block__text tab-content">
                     three exclusive and comfortable cabins, Et, Ro and Ly, are
                     designed by architect Sigurd Larsen. They all have an open
                     space with a double bed, a double sofa bed, kitchen,
@@ -222,63 +256,33 @@
                 </div>
               </div>
             </div>
-
-            <div class="hut-features__slider middle-slider swiper">
-              <div class="hut-features__wrapper swiper-wrapper">
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+            <div class="info-block__slider right-sided swiper">
+              <div class="info-block__wrapper swiper-wrapper">
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-2.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-2.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-2.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-2.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-2.jpg" alt="" />
                 </div>
               </div>
-              <div class="hut-features__slider-nav">
-                <div class="hut-features__btn-prev swiper-button-prev">
-                  <svg
-                    width="35"
-                    height="17"
-                    viewBox="0 0 35 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.414 9.18187H1.65293C1.31098 9.18187 1.03345 8.87642 1.03345 8.50006C1.03345 8.12369 1.31098 7.81824 1.65293 7.81824H33.414C33.7559 7.81824 34.0334 8.12369 34.0334 8.50006C34.0334 8.87642 33.7559 9.18187 33.414 9.18187Z"
-                      fill="#333333"
-                    />
-                    <path
-                      d="M8.87947 16C8.80211 16 8.72475 15.9718 8.66552 15.916L1.08824 8.70203C1.03203 8.64794 1 8.57487 1 8.49835C1 8.42182 1.03203 8.34875 1.08824 8.29467L8.66612 1.08415C8.78398 0.971951 8.97557 0.971951 9.09343 1.08415C9.21128 1.19634 9.21128 1.37874 9.09343 1.49093L1.7295 8.49835L9.09343 15.5086C9.21128 15.6208 9.21128 15.8032 9.09343 15.9154C9.0342 15.9718 8.95683 16 8.87947 16Z"
-                      stroke="#333333"
-                      stroke-width="0.681818"
-                    />
+              <div class="info-block__slider-nav">
+                <div class="info-block__btn-prev swiper-button-prev">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
                 </div>
-                <div class="hut-features__btn-next swiper-button-next">
-                  <svg
-                    width="35"
-                    height="17"
-                    viewBox="0 0 35 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.58604 9.18187H33.3471C33.689 9.18187 33.9666 8.87642 33.9666 8.50006C33.9666 8.12369 33.689 7.81824 33.3471 7.81824H1.58604C1.24408 7.81824 0.966553 8.12369 0.966553 8.50006C0.966553 8.87642 1.24408 9.18187 1.58604 9.18187Z"
-                      fill="#333333"
-                    />
-                    <path
-                      d="M26.1205 16C26.1979 16 26.2753 15.9718 26.3345 15.916L33.9118 8.70203C33.968 8.64794 34 8.57487 34 8.49835C34 8.42182 33.968 8.34875 33.9118 8.29467L26.3339 1.08415C26.216 0.971951 26.0244 0.971951 25.9066 1.08415C25.7887 1.19634 25.7887 1.37874 25.9066 1.49093L33.2705 8.49835L25.9066 15.5086C25.7887 15.6208 25.7887 15.8032 25.9066 15.9154C25.9658 15.9718 26.0432 16 26.1205 16Z"
-                      fill="#333333"
-                      stroke="#333333"
-                      stroke-width="0.681818"
-                    />
+                <div class="info-block__btn-next swiper-button-next">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
                   </svg>
                 </div>
                 <span class="swiper__start-number">01</span>
@@ -290,65 +294,36 @@
         </div>
       </section>
 
-      <section class="hut-features section">
+      <section class="info-block section">
         <div class="container">
-          <div class="hut-features__inner padding">
-            <div class="hut-features__slider swiper">
-              <div class="hut-features__wrapper swiper-wrapper">
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+          <div class="info-block__inner padding">
+            <div class="info-block__slider swiper">
+              <div class="info-block__wrapper swiper-wrapper">
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-3.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-3.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-3.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-3.jpg" alt="" />
                 </div>
-                <div class="hut-features__slider-item swiper-slide">
-                  <img src="./img/outside.jpg" alt="" />
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-3.jpg" alt="" />
                 </div>
               </div>
-              <div class="hut-features__slider-nav">
-                <div class="hut-features__btn-prev swiper-button-prev">
-                  <svg
-                    width="35"
-                    height="17"
-                    viewBox="0 0 35 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.414 9.18187H1.65293C1.31098 9.18187 1.03345 8.87642 1.03345 8.50006C1.03345 8.12369 1.31098 7.81824 1.65293 7.81824H33.414C33.7559 7.81824 34.0334 8.12369 34.0334 8.50006C34.0334 8.87642 33.7559 9.18187 33.414 9.18187Z"
-                      fill="#333333"
-                    />
-                    <path
-                      d="M8.87947 16C8.80211 16 8.72475 15.9718 8.66552 15.916L1.08824 8.70203C1.03203 8.64794 1 8.57487 1 8.49835C1 8.42182 1.03203 8.34875 1.08824 8.29467L8.66612 1.08415C8.78398 0.971951 8.97557 0.971951 9.09343 1.08415C9.21128 1.19634 9.21128 1.37874 9.09343 1.49093L1.7295 8.49835L9.09343 15.5086C9.21128 15.6208 9.21128 15.8032 9.09343 15.9154C9.0342 15.9718 8.95683 16 8.87947 16Z"
-                      stroke="#333333"
-                      stroke-width="0.681818"
-                    />
+              <div class="info-block__slider-nav">
+                <div class="info-block__btn-prev swiper-button-prev">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
                 </div>
-                <div class="hut-features__btn-next swiper-button-next">
-                  <svg
-                    width="35"
-                    height="17"
-                    viewBox="0 0 35 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.58604 9.18187H33.3471C33.689 9.18187 33.9666 8.87642 33.9666 8.50006C33.9666 8.12369 33.689 7.81824 33.3471 7.81824H1.58604C1.24408 7.81824 0.966553 8.12369 0.966553 8.50006C0.966553 8.87642 1.24408 9.18187 1.58604 9.18187Z"
-                      fill="#333333"
-                    />
-                    <path
-                      d="M26.1205 16C26.1979 16 26.2753 15.9718 26.3345 15.916L33.9118 8.70203C33.968 8.64794 34 8.57487 34 8.49835C34 8.42182 33.968 8.34875 33.9118 8.29467L26.3339 1.08415C26.216 0.971951 26.0244 0.971951 25.9066 1.08415C25.7887 1.19634 25.7887 1.37874 25.9066 1.49093L33.2705 8.49835L25.9066 15.5086C25.7887 15.6208 25.7887 15.8032 25.9066 15.9154C25.9658 15.9718 26.0432 16 26.1205 16Z"
-                      fill="#333333"
-                      stroke="#333333"
-                      stroke-width="0.681818"
-                    />
+                <div class="info-block__btn-next swiper-button-next">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
                   </svg>
                 </div>
                 <span class="swiper__start-number">01</span>
@@ -356,27 +331,24 @@
                 <span class="swiper__end-number">05</span>
               </div>
             </div>
-            <div class="hut-features__content">
-              <h2 class="hut-features__title">The Outside</h2>
-              <div class="hut-features__tabs tab-wrapper">
-                <div class="hut-features__btn-box">
+            <div class="info-block__content">
+              <h2 class="info-block__title">Go for a drive</h2>
+              <div class="info-block__tabs tab-wrapper">
+                <div class="info-block__btn-box">
                   <button
-                    data-tab-id="hot-tube"
-                    class="hut-features__button tab tab-active"
+                    data-tab-id="nature-1"
+                    class="info-block__button tab tab-active"
                   >
-                    Hot tube
+                    Lorem Impus
                   </button>
-                  <button
-                    data-tab-id="electric"
-                    class="hut-features__button tab"
-                  >
-                    Electric car charge
+                  <button data-tab-id="nature-2" class="info-block__button tab">
+                    Lorem Impus
                   </button>
                 </div>
-                <div class="hut-features__content-box">
+                <div class="info-block__content-box">
                   <div
-                    id="hot-tube"
-                    class="hut-features__text tab-content tab-content-active"
+                    id="nature-1"
+                    class="info-block__text tab-content tab-content-active"
                   >
                     Løvtag’s three exclusive and comfortable cabins, Et, Ro and
                     Ly, are designed by architect Sigurd Larsen. They all have
@@ -385,7 +357,7 @@
                     surrounded by treetops, there is a terrace, which is about
                     nine meters above ground.
                   </div>
-                  <div id="electric" class="hut-features__text tab-content">
+                  <div id="nature-2" class="info-block__text tab-content">
                     three exclusive and comfortable cabins, Et, Ro and Ly, are
                     designed by architect Sigurd Larsen. They all have an open
                     space with a double bed, a double sofa bed, kitchen,
@@ -394,12 +366,100 @@
                     nine meters above ground.
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-block section">
+        <div class="container">
+          <div class="info-block__inner padding">
+            <div class="info-block__content">
+              <h2 class="info-block__title">Small-town charm</h2>
+              <div class="info-block__tabs tab-wrapper">
+                <div class="info-block__btn-box">
+                  <button
+                    data-tab-id="nature-1"
+                    class="info-block__button tab tab-active"
+                  >
+                    Lorem Impus
+                  </button>
+                  <button data-tab-id="nature-2" class="info-block__button tab">
+                    Lorem Impus
+                  </button>
+                </div>
+                <div class="info-block__content-box">
+                  <div
+                    id="nature-1"
+                    class="info-block__text tab-content tab-content-active"
+                  >
+                    Løvtag’s three exclusive and comfortable cabins, Et, Ro and
+                    Ly, are designed by architect Sigurd Larsen. They all have
+                    an open space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                  <div id="nature-2" class="info-block__text tab-content">
+                    three exclusive and comfortable cabins, Et, Ro and Ly, are
+                    designed by architect Sigurd Larsen. They all have an open
+                    space with a double bed, a double sofa bed, kitchen,
+                    separate toilet and an outdoor shower. On the roof,
+                    surrounded by treetops, there is a terrace, which is about
+                    nine meters above ground.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-block__slider right-sided swiper">
+              <div class="info-block__wrapper swiper-wrapper">
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-4.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-4.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-4.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/area-4.jpg" alt="" />
+                </div>
+                <div class="info-block__slider-item swiper-slide">
+                  <img src="./img/vesterborg.jpg" alt="" />
+                </div>
+              </div>
+              <div class="info-block__slider-nav">
+                <div class="info-block__btn-prev swiper-button-prev">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="info-block__btn-next swiper-button-next">
+                  <svg width="35" height="17">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+                <span class="swiper__start-number">01</span>
+                <div class="swiper-pagination"></div>
+                <span class="swiper__end-number">05</span>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <div class="area-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17805.132605828305!2d10.227296356453579!3d56.09411862272075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c4103d1e9841b%3A0x373abb4139905c2d!2sAarhus%20Golf%20Club!5e0!3m2!1sen!2sru!4v1650918957859!5m2!1sen!2sru"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
 
     <footer class="footer">
       <div class="container">
