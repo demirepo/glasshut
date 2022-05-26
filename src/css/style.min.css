@@ -642,13 +642,24 @@ main {
   display: flex;
   list-style: none;
 }
-
-.menu__list-item {
+.menu__list .menu__list-item {
+  position: relative;
   margin-left: 36px;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.lng-menu {
+  position: relative;
+  align-self: flex-end;
+}
+.lng-menu .lng-menu__wrapper {
+  position: absolute;
+  top: 33px;
+  left: 0;
+  z-index: 1;
 }
 
 /* #endregion --- HEADER --- */
