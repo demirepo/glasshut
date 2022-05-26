@@ -1131,44 +1131,49 @@ main {
 .datepicker input:focus {
   outline: none;
 }
-.datepicker__check-in, .datepicker__check-out, .datepicker__guests {
+.datepicker .datepicker__check-in,
+.datepicker .datepicker__check-out,
+.datepicker .datepicker__guests {
   flex-grow: 1;
   flex-basis: 33%;
   min-width: 128px;
   padding: 10px 20px;
   border-right: 0.7px solid #333;
 }
-.datepicker__check-in span, .datepicker__check-out span, .datepicker__guests span {
+.datepicker .datepicker__check-in span,
+.datepicker .datepicker__check-out span,
+.datepicker .datepicker__guests span {
   display: block;
   margin-bottom: 3px;
   color: #333;
   font-size: 12px;
   line-height: 16px;
 }
-.datepicker__guests {
+.datepicker .datepicker__guests {
   border: none;
 }
-.datepicker__quantity {
+.datepicker .datepicker__quantity {
   display: flex;
   justify-content: space-between;
   width: 75%;
 }
-.datepicker__quantity span {
+.datepicker .datepicker__quantity span {
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
   text-align: left;
 }
-.datepicker__plus-btn, .datepicker__minus-btn {
+.datepicker .datepicker__plus-btn,
+.datepicker .datepicker__minus-btn {
   display: block;
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
-.datepicker__plus-btn {
+.datepicker .datepicker__plus-btn {
   margin-left: 13px;
 }
-.datepicker__button {
+.datepicker .datepicker__button {
   flex-grow: 1;
   flex-basis: 33%;
   min-width: 128px;
@@ -1580,7 +1585,7 @@ main {
   padding: 15px 25px;
   resize: none;
 }
-.about-contacts__input-box {
+.about-contacts .about-contacts__input-box {
   position: relative;
   flex: 1 0 45%;
   min-width: 200px;
@@ -1588,7 +1593,7 @@ main {
   padding: 0 25px;
   border: 1px solid #000;
 }
-.about-contacts__input-box .about-contacts__input-box input {
+.about-contacts .about-contacts__input-box input {
   position: absolute;
   top: 5px;
   right: 0;
@@ -1599,11 +1604,11 @@ main {
   border: none;
   outline: none;
 }
-.about-contacts__input-box .about-contacts__input-box input:focus + span, .about-contacts__input-box .about-contacts__input-box input:valid + span {
+.about-contacts .about-contacts__input-box input:focus + span, .about-contacts .about-contacts__input-box input:valid + span {
   font-size: 8px;
   transform: translateY(-23px);
 }
-.about-contacts__label {
+.about-contacts .about-contacts__label {
   position: absolute;
   top: 23px;
   left: 10px;
@@ -1615,7 +1620,7 @@ main {
   transition: all 0.3s;
   transform: translateY(-50%);
 }
-.about-contacts__button {
+.about-contacts .about-contacts__button {
   margin-left: auto;
 }
 

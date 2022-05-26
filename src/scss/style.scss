@@ -881,9 +881,9 @@ main {
     }
   }
 
-  &__check-in,
-  &__check-out,
-  &__guests {
+  .datepicker__check-in,
+  .datepicker__check-out,
+  .datepicker__guests {
     flex-grow: 1;
     flex-basis: 33%;
     min-width: 128px;
@@ -899,11 +899,11 @@ main {
     }
   }
 
-  &__guests {
+  .datepicker__guests {
     border: none;
   }
 
-  &__quantity {
+  .datepicker__quantity {
     display: flex;
     justify-content: space-between;
     width: 75%;
@@ -916,19 +916,19 @@ main {
     }
   }
 
-  &__plus-btn,
-  &__minus-btn {
+  .datepicker__plus-btn,
+  .datepicker__minus-btn {
     display: block;
     width: 20px;
     height: 20px;
     cursor: pointer;
   }
 
-  &__plus-btn {
+  .datepicker__plus-btn {
     margin-left: 13px;
   }
 
-  &__button {
+  .datepicker__button {
     flex-grow: 1;
     flex-basis: 33%;
     min-width: 128px;
@@ -1383,7 +1383,7 @@ main {
 
   /* spare & here is for specificity increase */
 
-  &__input-box {
+  .about-contacts__input-box {
     position: relative;
     flex: 1 0 45%;
     min-width: 200px;
@@ -1391,7 +1391,7 @@ main {
     padding: 0 25px;
     border: 1px solid #000;
 
-    & & input {
+    & input {
       position: absolute;
       top: 5px;
       right: 0;
@@ -1410,7 +1410,7 @@ main {
     }
   }
 
-  &__label {
+  .about-contacts__label {
     position: absolute;
     top: 23px;
     left: 10px;
@@ -1423,7 +1423,7 @@ main {
     transform: translateY(-50%);
   }
 
-  &__button {
+  .about-contacts__button {
     margin-left: auto;
   }
 }
