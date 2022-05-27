@@ -1,3 +1,32 @@
+// #region  --- HELPERS ---
+/**
+ *
+ * @param {*} today - date object, e.g. Date.now()
+ * @returns amount of days in month for given date
+ */
+const daysInMonth = (today) => {
+  return 33 - new Date(today.getFullYear(), today.getMonth(), 33).getDate();
+};
+//---------------------------------------------------------------------------
+/**
+ *
+ * @param {*} currentDate - date object, e.g. Date.now()
+ * @returns date object for 1st of previous month
+ */
+const getPrevMonth = (currentDate) => {
+  return new Date(currentDate.getFullYear(), currentDate.getMonth() - 1);
+};
+//---------------------------------------------------------------------------
+/**
+ *
+ * @param {*} currentDate - date object, e.g. Date.now()
+ * @returns date object for 1st of next month
+ */
+const getNextMonth = (currentDate) => {
+  return new Date(currentDate.getFullYear(), currentDate.getMonth() + 1);
+};
+// #endregion  --- HELPERS ---
+
 // #region  --- CALENDAR ---
 let selectionStart = null;
 let selectionEnd = null;

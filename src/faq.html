@@ -19,7 +19,7 @@
     />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-    <script defer src="./js/main.min.js"></script>
+    <script type="module" src="./js/main.min.js"></script>
 
     <title>Booking</title>
   </head>
@@ -96,11 +96,11 @@
       <div class="faq">
         <div class="container">
           <div class="faq__inner">
-            <div class="faq__accordeon">
+            <div data-single-spoiler class="faq__accordeon">
               <div data-spoiler-item class="faq__spoiler-item">
                 <div class="faq__trigger-bar spoiler__visible">
                   <span class="faq__title">PRICES</span>
-                  <div data-trigger class="faq__trigger">
+                  <div data-spoiler-trigger class="faq__trigger">
                     <img
                       class="spoiler__item-arrow"
                       src="./../img/accordeon-arrow-down.svg"
@@ -123,8 +123,10 @@
 
               <div data-spoiler-item class="faq__spoiler-item">
                 <div class="faq__trigger-bar spoiler__visible">
-                  <span class="faq__title">THE WALK UP TO GLASS HUT</span>
-                  <div data-trigger class="faq__trigger">
+                  <span data-spoiler-trigger class="faq__title"
+                    >THE WALK UP TO GLASS HUT</span
+                  >
+                  <div data-spoiler-trigger class="faq__trigger">
                     <img
                       class="spoiler__item-arrow"
                       src="./../img/accordeon-arrow-down.svg"
@@ -148,7 +150,7 @@
               <div data-spoiler-item class="faq__spoiler-item">
                 <div class="faq__trigger-bar spoiler__visible">
                   <span class="faq__title">CAPACITY</span>
-                  <div data-trigger class="faq__trigger">
+                  <div data-spoiler-trigger class="faq__trigger">
                     <img
                       class="spoiler__item-arrow"
                       src="./../img/accordeon-arrow-down.svg"
@@ -172,7 +174,7 @@
               <div data-spoiler-item class="faq__spoiler-item">
                 <div class="faq__trigger-bar spoiler__visible">
                   <span class="faq__title">PETS</span>
-                  <div data-trigger class="faq__trigger">
+                  <div data-spoiler-trigger class="faq__trigger">
                     <img
                       class="spoiler__item-arrow"
                       src="./../img/accordeon-arrow-down.svg"
@@ -195,8 +197,10 @@
 
               <div data-spoiler-item class="faq__spoiler-item">
                 <div class="faq__trigger-bar spoiler__visible">
-                  <span class="faq__title">CHECK-IN / CHECK-OUT</span>
-                  <div data-trigger class="faq__trigger">
+                  <span data-spoiler-trigger class="faq__title"
+                    >CHECK-IN / CHECK-OUT</span
+                  >
+                  <div data-spoiler-trigger class="faq__trigger">
                     <img
                       class="spoiler__item-arrow"
                       src="./../img/accordeon-arrow-down.svg"
