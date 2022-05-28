@@ -1606,6 +1606,7 @@ main {
   line-height: 18px;
 
   & p:first-of-type {
+    margin-bottom: 5px;
     font-weight: $fw-medium;
     font-size: $fz-l;
     line-height: 20px;
@@ -1620,22 +1621,16 @@ main {
 .spoiler__expandable {
   overflow: hidden;
   height: 0;
-  padding: 0 24px;
   background-color: $bg-primary;
   transition: height 0.7s;
-}
 
-.spoiler__expandable p::after,
-.spoiler__expandable p::before {
-  content: '';
-  display: block;
-  height: 24px;
-  background-color: $bg-primary;
-}
+  .spoiler__expandable-inner.expanded {
+    padding: 24px;
+  }
 
-.spoiler__expandable.expanded .spoiler__expandable {
-  padding: 0 24px;
-  transition: max-height 0.7s;
+  .spoiler__expandable-inner {
+    padding: 24px;
+  }
 }
 
 .spoiler__item.expanded .spoiler__item-arrow {
@@ -1785,11 +1780,11 @@ main {
     }
   }
 
-  .faq__expandable.spoiler__expandable p::after,
-  .faq__expandable.spoiler__expandable p::before {
-    content: '';
-    background-color: $bg-secondary;
-  }
+  // .faq__expandable.spoiler__expandable p::after,
+  // .faq__expandable.spoiler__expandable p::before {
+  //     content: '';
+  //     background-color: $bg-secondary;
+  // }
 }
 
 /* #endregion  --- FAQ --- */

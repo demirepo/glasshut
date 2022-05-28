@@ -1788,6 +1788,7 @@ main {
   line-height: 18px;
 }
 .spoiler__item-title p:first-of-type {
+  margin-bottom: 5px;
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
@@ -1801,22 +1802,14 @@ main {
 .spoiler__expandable {
   overflow: hidden;
   height: 0;
-  padding: 0 24px;
   background-color: #fff;
   transition: height 0.7s;
 }
-
-.spoiler__expandable p::after,
-.spoiler__expandable p::before {
-  content: "";
-  display: block;
-  height: 24px;
-  background-color: #fff;
+.spoiler__expandable .spoiler__expandable-inner.expanded {
+  padding: 24px;
 }
-
-.spoiler__expandable.expanded .spoiler__expandable {
-  padding: 0 24px;
-  transition: max-height 0.7s;
+.spoiler__expandable .spoiler__expandable-inner {
+  padding: 24px;
 }
 
 .spoiler__item.expanded .spoiler__item-arrow {
@@ -1946,11 +1939,6 @@ main {
 }
 .faq .faq__expandable .faq__title {
   display: block;
-}
-.faq .faq__expandable.spoiler__expandable p::after,
-.faq .faq__expandable.spoiler__expandable p::before {
-  content: "";
-  background-color: #e9ece0;
 }
 
 /* #endregion  --- FAQ --- */

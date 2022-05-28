@@ -1,15 +1,19 @@
 /* html snippet
-/
-/
+Data attributes:
+    data-single-spoiler - assign to accordeon to open only one spoiler at once
+    data-spoiler-item - for every accordeon item
+    data-spoiler-trigger - for trigger
+    data-spoiler - for expending area
 
-<div class="accordeon">
+
+<div data-single-spoiler class="accordeon">
   <div data-spoiler-item class="spoiler-item">
     <div class="spoiler__visible">
-      <span class="spoile__title">PRICES</span>
+      <span class="spoile__title">SOME TEXT</span>
       <div data-spoiler-trigger class="faq__trigger">
         <img
           class="spoiler__item-arrow"
-          src="./../img/accordeon-arrow-down.svg"
+          src="./img/accordeon-arrow-down.svg"
           alt=""
         />
       </div>
@@ -86,14 +90,13 @@ if (spoilers) {
             if (
                 openOnlyOneSpoilerList.has(shouldOpenSpoilerItem.parentElement)
             ) {
-                // открываем тот, на котором щелкнули
+                // opening triggered spoiler
                 isExpanded(expandable) ? close(expandable) : open(expandable);
                 const spoilerItems =
                     shouldOpenSpoilerItem.parentElement.querySelectorAll(
                         '[data-spoiler-item]'
                     );
-                console.log(spoilerItems);
-                // закрываем все открытые, кроме того, на котором клик
+                // closing all the rest, exept triggered
                 for (let spoilerItem of spoilerItems) {
                     const shouldCloseExpandable =
                         spoilerItem.querySelector('[data-spoiler]');
