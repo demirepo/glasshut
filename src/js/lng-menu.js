@@ -1,5 +1,5 @@
 const wrapper = document.querySelector('.lng-menu__wrapper');
-const lngSwitch = document.querySelector('.menu__language-img');
+const lngSwitch = document.querySelector('.lng-menu__img');
 const lngOptions = document.querySelectorAll('.lng-menu__item img');
 
 if (lngSwitch && wrapper && lngOptions) {

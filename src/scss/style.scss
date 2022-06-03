@@ -329,11 +329,8 @@ main {
   }
 
   .header__logo {
+    z-index: 4;
     margin: 18px 0 17px var(--big-interval);
-
-    .header__logo-img {
-      z-index: 5;
-    }
   }
 
   .header__button {
@@ -355,17 +352,19 @@ main {
   }
 }
 
-.menu__language {
-  display: block;
-  height: auto;
-}
-
 .lng-menu {
   position: relative;
-  display: block;
+  top: 0;
+  right: 0;
   align-self: center;
-  height: auto;
+  height: 25px;
+  margin-left: 25px;
   font-size: 0;
+
+  .lng-menu__link {
+    display: inline-block;
+    height: 25px;
+  }
 
   .lng-menu__wrapper {
     position: absolute;
@@ -379,7 +378,15 @@ main {
   }
 
   .lng-menu__item {
+    display: block;
+    width: 25px;
+    height: auto;
+    height: 25px;
     cursor: pointer;
+  }
+
+  .lng-menu__item + .lng-menu__item {
+    margin-top: 5px;
   }
 }
 
@@ -1477,7 +1484,7 @@ main {
 
 .info-block {
   .info-block__inner {
-    display: flex;
+    display: grid;
   }
 
   .info-block__slider.swiper {
@@ -1526,10 +1533,10 @@ main {
     &.tab-active {
       border-bottom: 1px solid #000;
     }
+  }
 
-    & + & {
-      margin-left: 30px;
-    }
+  .info-block__button + .info-block__button {
+    margin-left: 30px;
   }
 
   .info-block__content-box {
@@ -1877,6 +1884,11 @@ main {
     .header__inner {
       justify-content: center;
     }
+
+    .header__logo {
+      position: relative;
+      z-index: 2;
+    }
   }
 
   .burger-icon {
@@ -1973,7 +1985,7 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: 2;
     display: block;
     width: 100vw;
     height: 100px;
@@ -1982,10 +1994,9 @@ main {
 
   .lng-menu {
     position: absolute;
-    top: 0;
+    top: 35px;
     right: $padding;
-    left: 0;
-    z-index: 2;
+    z-index: 5;
     opacity: 1;
     transition: opacity $transition-time-mid ease-out;
     transform: scale(2);
@@ -1994,9 +2005,16 @@ main {
   .menu.hidden {
     position: absolute;
     left: -150%;
+    transition: left $transition-time-mid;
 
     & + .lng-menu {
       opacity: 0;
+    }
+  }
+
+  .info-block {
+    .info-block__inner {
+      flex-direction: column;
     }
   }
 }
