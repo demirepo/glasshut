@@ -31,7 +31,7 @@
           <a class="header__logo" href="index.html">
             <img class="header__logo-img" src="img/logo.svg" alt="logo" />
           </a>
-          <nav class="menu">
+          <nav class="menu hidden">
             <ul class="menu__list">
               <li class="menu__list-item">
                 <a class="menu__link menu__link--active" href="index.html">
@@ -58,13 +58,14 @@
               <li class="menu__list-item">
                 <a class="menu__link" href="faq.html"> faq </a>
               </li>
-
-              <li class="menu__list-item lng-menu">
+              <ul class="menu__list-item lng-menu">
                 <a class="menu__language" href="#">
                   <img
                     class="menu__language-img"
                     src="img/denmark.svg"
                     alt="uk"
+                    width="25"
+                    height="25"
                   />
                 </a>
 
@@ -76,9 +77,10 @@
                     <img src="./img/united-kingdom.svg" alt="" />
                   </li>
                 </ul>
-              </li>
+              </ul>
             </ul>
           </nav>
+
           <button
             class="header__button button button--small"
             href="calendar.html"
@@ -433,77 +435,79 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__subscription">
-            <p>Newsletter</p>
-            <form class="sub-form" action="#">
-              <input
-                class="sub-form__input"
-                placeholder="Email Address"
-                type="text"
-              />
-              <button class="sub-form__submit" type="submit">
-                <svg
-                  class="sub-form__arrow"
-                  width="34"
-                  height="17"
-                  viewBox="0 0 34 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.619484 9.18175h22.3805C32.7225 9.18175 33 8.8763 33 8.49993C33 8.12357 32.7225 7.81812 32.3805 7.81812H0.619484C0.277527 7.81812 0 8.12357 0 8.49993C0 8.8763 0.277527 9.18175 0.619484 9.18175Z"
-                    fill="#EFEFEF"
-                  />
-                  <path
-                    d="M25.1541 16C25.2315 16 25.3088 15.9718 25.3681 15.916L32.9453 8.70203C33.0015 8.64794 33.0336 8.57487 33.0336 8.49835C33.0336 8.42182 33.0015 8.34875 32.9453 8.29467L25.3674 1.08415C25.2496 0.971951 25.058 0.971951 24.9401 1.08415C24.8223 1.19634 24.8223 1.37874 24.9401 1.49093L32.3041 8.49835L24.9401 15.5086C24.8223 15.6208 24.8223 15.8032 24.9401 15.9154C24.9994 15.9718 25.0767 16 25.1541 16Z"
-                    fill="#EFEFEF"
-                    stroke="#EFEFEF"
-                    stroke-width="0.681818"
-                  />
-                </svg>
-              </button>
-            </form>
-            <p>
-              Sign up to our newsletter for special things and receive 10% off
-              your next order.
-            </p>
-            <p>© 2021 The Glass Huts</p>
+          <div class="footer__content">
+            <div class="footer__subscription">
+              <p>Newsletter</p>
+              <form class="sub-form" action="#">
+                <input
+                  class="sub-form__input"
+                  placeholder="Email Address"
+                  type="text"
+                />
+                <button class="sub-form__submit" type="submit">
+                  <svg
+                    class="sub-form__arrow"
+                    width="34"
+                    height="17"
+                    viewBox="0 0 34 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.619484 9.18175h22.3805C32.7225 9.18175 33 8.8763 33 8.49993C33 8.12357 32.7225 7.81812 32.3805 7.81812H0.619484C0.277527 7.81812 0 8.12357 0 8.49993C0 8.8763 0.277527 9.18175 0.619484 9.18175Z"
+                      fill="#EFEFEF"
+                    />
+                    <path
+                      d="M25.1541 16C25.2315 16 25.3088 15.9718 25.3681 15.916L32.9453 8.70203C33.0015 8.64794 33.0336 8.57487 33.0336 8.49835C33.0336 8.42182 33.0015 8.34875 32.9453 8.29467L25.3674 1.08415C25.2496 0.971951 25.058 0.971951 24.9401 1.08415C24.8223 1.19634 24.8223 1.37874 24.9401 1.49093L32.3041 8.49835L24.9401 15.5086C24.8223 15.6208 24.8223 15.8032 24.9401 15.9154C24.9994 15.9718 25.0767 16 25.1541 16Z"
+                      fill="#EFEFEF"
+                      stroke="#EFEFEF"
+                      stroke-width="0.681818"
+                    />
+                  </svg>
+                </button>
+              </form>
+              <p class="footer__input-descr">
+                Sign up to our newsletter for special things and receive 10% off
+                your next order.
+              </p>
+            </div>
+            <div class="footer__info">
+              <ul class="footer__policy-list">
+                <li class="footer__policy-item">
+                  <a href="#">TERMS AND CONDITIONS</a>
+                </li>
+                <li class="footer__policy-item">
+                  <a href="#">CANCELLATION POLICY</a>
+                </li>
+                <li class="footer__policy-item">
+                  <a href="#">PRIVACY POLICY</a>
+                </li>
+              </ul>
+              <ul class="footer__payment-list">
+                <li class="footer__payment-item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#paypal"></use>
+                  </svg>
+                </li>
+                <li class="footer__payment-item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#mastercard"></use>
+                  </svg>
+                </li>
+                <li class="footer__payment-item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#visa"></use>
+                  </svg>
+                </li>
+                <li class="footer__payment-item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#bank"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="footer__info">
-            <ul class="footer__policy-list">
-              <li class="footer__policy-item">
-                <a href="#">TERMS AND CONDITIONS</a>
-              </li>
-              <li class="footer__policy-item">
-                <a href="#">CANCELLATION POLICY</a>
-              </li>
-              <li class="footer__policy-item">
-                <a href="#">PRIVACY POLICY</a>
-              </li>
-            </ul>
-            <ul class="footer__payment-list">
-              <li class="footer__payment-item">
-                <svg>
-                  <use xlink:href="img/sprite.svg#paypal"></use>
-                </svg>
-              </li>
-              <li class="footer__payment-item">
-                <svg>
-                  <use xlink:href="img/sprite.svg#mastercard"></use>
-                </svg>
-              </li>
-              <li class="footer__payment-item">
-                <svg>
-                  <use xlink:href="img/sprite.svg#visa"></use>
-                </svg>
-              </li>
-              <li class="footer__payment-item">
-                <svg>
-                  <use xlink:href="img/sprite.svg#bank"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
+          <p class="footer__copyright">© 2021 The Glass Huts</p>
         </div>
       </div>
     </footer>

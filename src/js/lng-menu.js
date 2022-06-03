@@ -3,18 +3,17 @@ const lngSwitch = document.querySelector('.menu__language-img');
 const lngOptions = document.querySelectorAll('.lng-menu__item img');
 
 if (lngSwitch && wrapper && lngOptions) {
-  lngSwitch.addEventListener('click', function () {
-    wrapper.classList.toggle('visually-hidden');
-  });
-
-  lngOptions.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      if (e.target.closest('.lng-menu__item')) {
-        const temp = lngSwitch.getAttribute('src');
-        lngSwitch.setAttribute('src', e.target.getAttribute('src'));
-        e.target.setAttribute('src', temp);
-        wrapper.classList.toggle('visually-hidden');
-      }
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.lng-menu')) {
+            const temp = lngSwitch.getAttribute('src');
+            const choiceSrc = e.target.getAttribute('src');
+            if (temp && choiceSrc) {
+                lngSwitch.setAttribute('src', choiceSrc);
+                e.target.setAttribute('src', temp);
+                wrapper.classList.toggle('visually-hidden');
+            }
+        } else {
+            wrapper.classList.add('visually-hidden');
+        }
     });
-  });
 }

@@ -20,3 +20,15 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+const burgerIcon = document.querySelector('.burger-icon');
+if (burgerIcon) {
+    burgerIcon.addEventListener('click', () => {
+        burgerIcon.classList.toggle('active');
+        document.body.classList.toggle('scroll-lock');
+        const menu = document.querySelector('.menu');
+        if (menu) {
+            menu.classList.toggle('hidden');
+        }
+    });
+}
