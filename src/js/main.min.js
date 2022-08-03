@@ -32,3 +32,8 @@ if (burgerIcon) {
         }
     });
 }
+
+// const bouncedLog = debounce(console.log, 1000);
+// bouncedLog(1);
+// bouncedLog(2);
+// bouncedLog(3);

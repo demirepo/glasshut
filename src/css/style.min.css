@@ -6,12 +6,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
+  line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
-          text-size-adjust: 100%;
-  /* 2 */
+          text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -46,12 +44,9 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  overflow: visible;
-  /* 2 */
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
+  overflow: visible; /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
 }
 
 /**
@@ -59,10 +54,8 @@ hr {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 pre {
-  font-size: 1em;
-  /* 2 */
-  font-family: monospace, monospace;
-  /* 1 */
+  font-size: 1em; /* 2 */
+  font-family: monospace, monospace; /* 1 */
 }
 
 /* Text-level semantics
@@ -79,13 +72,10 @@ a {
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -103,10 +93,8 @@ strong {
 code,
 kbd,
 samp {
-  font-size: 1em;
-  /* 2 */
-  font-family: monospace, monospace;
-  /* 1 */
+  font-size: 1em; /* 2 */
+  font-family: monospace, monospace; /* 1 */
 }
 
 /**
@@ -156,14 +144,10 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
-  /* 2 */
-  font-size: 100%;
-  /* 1 */
-  font-family: inherit;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
+  margin: 0; /* 2 */
+  font-size: 100%; /* 1 */
+  font-family: inherit; /* 1 */
+  line-height: 1.15; /* 1 */
 }
 
 /**
@@ -233,18 +217,12 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  display: table;
-  /* 1 */
-  box-sizing: border-box;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  color: inherit;
-  /* 2 */
-  white-space: normal;
-  /* 1 */
+  display: table; /* 1 */
+  box-sizing: border-box; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  color: inherit; /* 2 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -267,10 +245,8 @@ textarea {
    */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -286,12 +262,10 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 [type=search] {
-  outline-offset: -2px;
-  /* 2 */
+  outline-offset: -2px; /* 2 */
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
-          appearance: textfield;
-  /* 1 */
+          appearance: textfield; /* 1 */
 }
 
 /**
@@ -307,11 +281,9 @@ textarea {
    * 2. Change font properties to `inherit` in Safari.
    */
 ::-webkit-file-upload-button {
-  font: inherit;
-  /* 2 */
+  font: inherit; /* 2 */
   -webkit-appearance: button;
-          appearance: button;
-  /* 1 */
+          appearance: button; /* 1 */
 }
 
 /* Interactive
@@ -456,10 +428,6 @@ main {
 }
 
 .clear-on-focus:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.clear-on-focus:focus:-ms-input-placeholder {
   color: transparent;
 }
 
@@ -660,8 +628,7 @@ main {
   position: relative;
   top: 0;
   right: 0;
-  -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   height: 25px;
   margin-left: 25px;
   font-size: 0;
@@ -1065,9 +1032,6 @@ main {
 .sub-form .sub-form__input::-moz-placeholder {
   color: #fff;
 }
-.sub-form .sub-form__input:-ms-input-placeholder {
-  color: #fff;
-}
 .sub-form .sub-form__input::placeholder {
   color: #fff;
 }
@@ -1075,9 +1039,6 @@ main {
   outline: 1px dashed #e9ece0;
 }
 .sub-form .sub-form__input:focus::-moz-placeholder {
-  opacity: 0;
-}
-.sub-form .sub-form__input:focus:-ms-input-placeholder {
   opacity: 0;
 }
 .sub-form .sub-form__input:focus::placeholder {
@@ -1141,16 +1102,10 @@ main {
 .datepicker input::-moz-placeholder {
   color: #828282;
 }
-.datepicker input:-ms-input-placeholder {
-  color: #828282;
-}
 .datepicker input::placeholder {
   color: #828282;
 }
 .datepicker input:focus::-moz-placeholder {
-  color: transparent;
-}
-.datepicker input:focus:-ms-input-placeholder {
   color: transparent;
 }
 .datepicker input:focus::placeholder {
@@ -1434,16 +1389,10 @@ main {
 .booking .booking__coupon-code::-moz-placeholder {
   color: #828282;
 }
-.booking .booking__coupon-code:-ms-input-placeholder {
-  color: #828282;
-}
 .booking .booking__coupon-code::placeholder {
   color: #828282;
 }
 .booking .booking__coupon-code:focus::-moz-placeholder {
-  color: transparent;
-}
-.booking .booking__coupon-code:focus:-ms-input-placeholder {
   color: transparent;
 }
 .booking .booking__coupon-code:focus::placeholder {
@@ -1512,11 +1461,9 @@ main {
 }
 
 .about-tiles .about-tiles__inner {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 25px 1fr 25px 1fr;
-      grid-template: 1fr 1fr/repeat(3, 1fr);
-      grid-template-areas: "one two two" "three four five";
+  grid-template: 1fr 1fr/repeat(3, 1fr);
+  grid-template-areas: "one two two" "three four five";
   gap: 25px;
 }
 .about-tiles .about-tiles__tile-1 {
@@ -1675,8 +1622,7 @@ main {
 }
 
 .info-block .info-block__inner {
-  display: -ms-grid;
-  display: grid;
+  display: flex;
 }
 .info-block .info-block__slider.swiper {
   flex-basis: 50%;
@@ -1687,7 +1633,7 @@ main {
   margin-left: calc(var(--big-interval) - 32px);
 }
 .info-block .info-block__wrapper {
-  width: 546px;
+  max-width: 546px;
   height: 478px;
   margin-bottom: 50px;
 }
@@ -1699,7 +1645,6 @@ main {
   height: 19px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .info-block .info-block__content {
@@ -1743,6 +1688,11 @@ main {
   position: static;
 }
 
+.info-block.slider-right .info-block__slider.swiper {
+  margin-right: 0;
+  margin-left: calc(var(--big-interval) - 32px);
+}
+
 .info-block__slider-item {
   width: 100%;
 }
@@ -1763,7 +1713,6 @@ main {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1916,7 +1865,6 @@ main {
   padding: calc(var(--big-interval) - (var(--big-interval) - 32px));
 }
 .area-outlines .area-outlines__text {
-  display: -ms-grid;
   display: grid;
   margin: auto;
   padding: 0 100px;
@@ -1984,7 +1932,6 @@ main {
   .footer__info {
     align-items: flex-end;
   }
-
   .footer__policy-list {
     flex-direction: column;
     align-items: flex-end;
@@ -2002,21 +1949,17 @@ main {
   .cabins__top {
     flex-flow: column wrap;
   }
-
   .cabins__img {
     flex: 1;
     margin: 32px auto 0;
   }
-
   .contacts__inner {
     flex-direction: column;
     text-align: center;
   }
-
   .contacts__content {
     margin-right: 0;
   }
-
   .contacts__widget {
     margin: 32px auto;
   }
@@ -2036,7 +1979,6 @@ main {
     position: relative;
     z-index: 2;
   }
-
   .burger-icon {
     position: absolute;
     top: 50%;
@@ -2048,7 +1990,6 @@ main {
     cursor: pointer;
     transform: translateY(-50%);
   }
-
   .burger-icon-span,
 .burger-icon::before,
 .burger-icon::after {
@@ -2059,38 +2000,31 @@ main {
     background-color: #000;
     transition: all 0.2s;
   }
-
   .burger-icon::after {
     content: "";
     bottom: 0;
     background-color: #000;
   }
-
   .burger-icon::before {
     content: "";
     top: 0;
     background-color: #000;
   }
-
   .burger-icon-span {
     top: 50%;
     transform: scale(1) translateY(-50%);
   }
-
   .burger-icon.active .burger-icon-span {
     transform: scale(0);
   }
-
   .burger-icon.active::before {
     top: 50%;
     transform: rotate(-45deg) translateY(-50%);
   }
-
   .burger-icon.active::after {
     bottom: 50%;
     transform: rotate(45deg) translateY(50%);
   }
-
   .menu {
     position: fixed;
     top: 0;
@@ -2122,7 +2056,6 @@ main {
     font-size: 30px;
     line-height: 1.5;
   }
-
   .header__inner::before {
     content: "";
     position: absolute;
@@ -2133,7 +2066,6 @@ main {
     height: 100px;
     background-color: #fff;
   }
-
   .lng-menu {
     position: absolute;
     top: 35px;
@@ -2143,7 +2075,6 @@ main {
     transition: opacity 0.5s ease-out;
     transform: scale(2);
   }
-
   .menu.hidden {
     position: absolute;
     left: -150%;
@@ -2152,9 +2083,15 @@ main {
   .menu.hidden + .lng-menu {
     opacity: 0;
   }
-
   .info-block .info-block__inner {
     flex-direction: column;
+  }
+  .info-block .info-block__slider.swiper {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .info-block:not(.slider-right) .info-block__content {
+    order: -1;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2186,7 +2123,6 @@ main {
   :root {
     --big-interval: 16px;
   }
-
   .datepicker__button {
     margin-top: 24px;
   }

@@ -1484,7 +1484,7 @@ main {
 
 .info-block {
   .info-block__inner {
-    display: grid;
+    display: flex;
   }
 
   .info-block__slider.swiper {
@@ -1498,7 +1498,7 @@ main {
   }
 
   .info-block__wrapper {
-    width: 546px;
+    max-width: 546px;
     height: 478px;
     margin-bottom: 50px;
   }
@@ -1556,6 +1556,13 @@ main {
 
   .info-block__text.pos {
     position: static;
+  }
+}
+
+.info-block.slider-right {
+  .info-block__slider.swiper {
+    margin-right: 0;
+    margin-left: calc($padding);
   }
 }
 
@@ -2015,6 +2022,17 @@ main {
   .info-block {
     .info-block__inner {
       flex-direction: column;
+    }
+
+    .info-block__slider.swiper {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .info-block:not(.slider-right) {
+    .info-block__content {
+      order: -1;
     }
   }
 }
