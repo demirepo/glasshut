@@ -1,4 +1,4 @@
-export function throttle(callback, delay) {
+function throttleFunc(callback, delay) {
     let isThrottled = false;
     let savedThis = null;
     let savedArgs = null;

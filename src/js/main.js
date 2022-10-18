@@ -1,7 +1,3 @@
-import './accordeon.js';
-import './tabs.js';
-import './lng-menu.js';
-
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,

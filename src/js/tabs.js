@@ -1,4 +1,4 @@
-import { throttle } from './throttle.js';
+// import { throttle } from './throttle.js';
 
 document.addEventListener('click', (e) => {
     const wrapper = e.target.closest('.tab-wrapper');
@@ -44,5 +44,5 @@ function updateTabHeights() {
 }
 
 updateTabHeights();
-const throttledHeightUpdate = throttle(updateTabHeights, 500);
+const throttledHeightUpdate = throttleFunc(updateTabHeights, 500);
 window.addEventListener('resize', throttledHeightUpdate);
