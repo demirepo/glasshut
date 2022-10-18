@@ -1,0 +1,213 @@
+@use 'abstracts' as *;
+
+.about-banner {
+  background: url('./../img/aboutus-banner.jpg') no-repeat 50% 50% / cover;
+
+  .about-banner__title,
+  .about-banner__link {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-banner__title {
+    margin-bottom: 90px;
+  }
+}
+
+.about-info {
+  .about-info__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--big-interval);
+  }
+
+  .about-info__content {
+    flex-basis: 45%;
+  }
+
+  .about-info__quote {
+    display: block;
+    margin-bottom: 32px;
+    color: $primary;
+    font-weight: $fw-normal;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .about-info__text {
+    color: $grey1;
+    font-size: $fz-m;
+    line-height: 30px;
+  }
+}
+
+.about-info__img {
+  flex-basis: 45%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-mid-header {
+  margin-bottom: 100px;
+}
+
+.about-tiles {
+  .about-tiles__inner {
+    display: grid;
+    grid-template: 1fr 1fr / repeat(3, 1fr);
+    grid-template-areas: 'one two two' 'three four five';
+    gap: 25px;
+  }
+
+  .about-tiles__tile-1 {
+    grid-area: one;
+  }
+
+  .about-tiles__tile-2 {
+    grid-area: two;
+  }
+
+  .about-tiles__tile-3 {
+    grid-area: three;
+  }
+
+  .about-tiles__tile-4 {
+    display: flex;
+    grid-area: four;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    padding: 0 65px;
+    background-color: $bg-secondary;
+    font-weight: $fw-normal;
+    font-style: italic;
+    font-size: $fz-xl;
+    line-height: 36px;
+  }
+
+  .about-tiles__tile-5 {
+    grid-area: five;
+  }
+
+  .about-tiles__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-contacts {
+  .about-contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--big-interval);
+  }
+
+  .about-contacts__content {
+    flex-basis: 40%;
+  }
+
+  .about-contacts__form {
+    display: flex;
+    flex-basis: 60%;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-color: $primary;
+    font-weight: $fw-normal;
+    font-size: $fz-m;
+    line-height: 18px;
+  }
+
+  .about-contacts__textarea {
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    border: 1px solid #000;
+
+    & textarea {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border: none;
+      outline: none;
+    }
+
+    & textarea:focus + span,
+    & textarea:valid + span {
+      font-size: 8px;
+      transform: translateY(-23px);
+    }
+  }
+
+  .about-contacts__message {
+    width: 100%;
+    min-height: 125px;
+    margin-bottom: 25px;
+    padding: 15px 25px;
+    resize: none;
+  }
+
+  /* spare & here is for specificity increase */
+
+  .about-contacts__input-box {
+    position: relative;
+    flex: 1 0 45%;
+    min-width: 200px;
+    min-height: 50px;
+    padding: 0 25px;
+    border: 1px solid #000;
+
+    & input {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      padding: 0 15px;
+      border: none;
+      outline: none;
+
+      &:focus + span,
+      &:valid + span {
+        font-size: 8px;
+        transform: translateY(-23px);
+      }
+    }
+  }
+
+  .about-contacts__label {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    display: block;
+    margin: auto 0;
+    padding: 0 10px;
+    color: $grey3;
+    pointer-events: none;
+    transition: all 0.3s;
+    transform: translateY(-50%);
+  }
+
+  .about-contacts__button {
+    margin-left: auto;
+  }
+}
+
+.about-bottom-image {
+  position: relative;
+  left: 50%;
+  margin: var(--big-interval) auto;
+  transform: translateX(-50%);
+}

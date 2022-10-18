@@ -1,0 +1,98 @@
+@use 'abstracts' as *;
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox + label::before {
+  content: '';
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $bg-primary;
+  background-image: url('./../img/cross.svg');
+  background-position: center center;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  transition: background-color 0.2s;
+}
+
+.custom-checkbox:checked + label::before {
+  border-color: $black;
+  background-color: $primary;
+  background-image: url('./../img/v-mark.svg');
+  background-size: 19px 13px;
+}
+
+.spoiler form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.spoiler__item {
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.spoiler__visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background-color: $bg-secondary;
+}
+
+.spoiler__checkbox {
+  display: flex;
+}
+
+.spoiler__item-title {
+  margin-left: 20px;
+  color: $grey1;
+  font-weight: $fw-normal;
+  font-size: $fz-m;
+  line-height: 18px;
+
+  & p:first-of-type {
+    margin-bottom: 5px;
+    font-weight: $fw-medium;
+    font-size: $fz-l;
+    line-height: 20px;
+  }
+}
+
+.spoiler__item-arrow {
+  cursor: pointer;
+  transition: transform $transition-time-mid;
+}
+
+.spoiler__expandable {
+  overflow: hidden;
+  height: 0;
+  background-color: $bg-primary;
+  transition: height 0.7s;
+
+  .spoiler__expandable-inner.expanded {
+    padding: 24px;
+  }
+
+  .spoiler__expandable-inner {
+    padding: 24px;
+  }
+}
+
+.spoiler__item.expanded .spoiler__item-arrow {
+  transition: transform 0.2s;
+  transform: rotate(-180deg);
+}
+
+.is-collapsed {
+  height: 0;
+}

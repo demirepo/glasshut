@@ -1,0 +1,54 @@
+@use 'abstracts' as *;
+
+.contacts {
+  .contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--big-interval);
+  }
+
+  .contacts__content {
+    flex-grow: 1;
+    margin-right: 50px;
+  }
+
+  .contacts__text {
+    font-size: $fz-m;
+  }
+
+  .contacts__widget {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-content: flex-start;
+    margin-left: auto;
+  }
+}
+
+.contacts__widget-img img {
+  display: block;
+  width: 100%;
+}
+
+.contacts__social {
+  display: inline-flex;
+  align-items: center;
+  max-height: 50px;
+  margin-top: 50px;
+}
+
+.contacts__social-link {
+  & svg {
+    width: 50px;
+    height: 50px;
+    fill: $primary;
+  }
+
+  &:hover svg {
+    fill: $secondary;
+  }
+
+  & + & {
+    margin-left: 43px;
+  }
+}

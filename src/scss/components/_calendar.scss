@@ -1,0 +1,258 @@
+@use 'abstracts' as *;
+
+.datepicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 676px;
+  min-height: 66px;
+  font-weight: 300;
+  font-style: italic;
+  font-size: $fz-sm;
+  line-height: 16px;
+
+  .datepicker__inputs {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 66%;
+    width: 100%;
+    max-height: 66px;
+    border: 0.7px solid #333;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: $fz-sm;
+    line-height: 18px;
+
+    &::placeholder {
+      color: #828282;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .datepicker__check-in,
+  .datepicker__check-out,
+  .datepicker__guests {
+    flex-grow: 1;
+    flex-basis: 33%;
+    min-width: 128px;
+    padding: 10px 20px;
+    border-right: 0.7px solid $grey1;
+
+    & span {
+      display: block;
+      margin-bottom: 3px;
+      color: $grey1;
+      font-size: $fz-xs;
+      line-height: 16px;
+    }
+  }
+
+  .datepicker__guests {
+    border: none;
+  }
+
+  .datepicker__quantity {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+
+    span {
+      font-weight: $fw-normal;
+      font-style: normal;
+      font-size: $fz-sm;
+      text-align: left;
+    }
+  }
+
+  .datepicker__plus-btn,
+  .datepicker__minus-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .datepicker__plus-btn {
+    margin-left: 13px;
+  }
+
+  .datepicker__button {
+    flex-grow: 1;
+    flex-basis: 33%;
+    min-width: 128px;
+    height: 66px;
+  }
+}
+
+.calendar {
+  margin: 50px;
+
+  .calendar__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 676px;
+    min-height: 380px;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid $grey1;
+
+    .current-month {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    .next-month {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  .calendar__buttons {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .calendar__clear {
+    background-color: $bg-primary;
+    color: $grey1;
+    font-weight: $fw-medium;
+    font-size: $fz-sm;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 18px;
+    text-decoration: underline;
+    text-transform: none;
+
+    &:hover {
+      background-color: $bg-secondary;
+      color: $black;
+    }
+  }
+
+  .calendar__close {
+    width: 66px;
+    height: 32px;
+    margin-left: 20px;
+    font-weight: $fw-normal;
+    font-size: $fz-sm;
+    line-height: 18px;
+    text-transform: none;
+  }
+}
+
+.month {
+  display: inline-block;
+  padding: 16px;
+
+  .month__table {
+    border-collapse: collapse;
+  }
+
+  .month__title {
+    position: relative;
+    margin-bottom: 17px;
+    padding: 0 16px;
+    font-weight: 400;
+    font-size: $fz-m;
+    line-height: 16px;
+  }
+
+  .month.current-month &__prev-next-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+    background-color: $bg-primary;
+  }
+
+  &.next-month &__prev-next-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-color: $bg-primary;
+    transform: rotate(180deg);
+  }
+
+  .month__arrow-left {
+    fill: $grey1;
+    stroke: $grey1;
+
+    &:hover {
+      cursor: pointer;
+      fill: $black;
+      stroke: $black;
+    }
+  }
+
+  .month__head th {
+    color: #828282;
+    font-weight: 400;
+    font-size: $fz-xs;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & td {
+    width: 40px;
+    height: 40px;
+    color: #333;
+    font-weight: 400;
+    font-size: $fz-sm;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e4e4e4;
+    }
+
+    &.select-start,
+    &.select-end {
+      position: relative;
+      border-radius: 50%;
+      background-color: $primary;
+      color: $bg-primary;
+    }
+
+    &.select-start.extended::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      z-index: -1;
+      display: block;
+      width: 60px;
+      height: 40px;
+      background-color: #e4e4e4;
+    }
+
+    &.select-end.extended::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      z-index: -1;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #e4e4e4;
+    }
+
+    &.select-between {
+      background-color: #e4e4e4;
+    }
+  }
+}

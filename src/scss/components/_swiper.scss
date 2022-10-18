@@ -1,0 +1,54 @@
+@use 'abstracts' as *;
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 1.5px;
+  margin: 0 !important;
+  border-radius: 0;
+  background-color: #dcdcdc;
+}
+
+.swiper-pagination-bullet-active {
+  margin: 0;
+  background-color: $grey1;
+}
+
+.info-block__btn-prev.swiper-button-prev,
+.info-block__btn-next.swiper-button-next {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  inset: 0;
+
+  &::after {
+    content: '';
+  }
+
+  & svg {
+    position: relative;
+    top: -7px;
+    fill: $grey1;
+    stroke: $grey1;
+    stroke-width: 0.68;
+  }
+
+  &:hover svg {
+    stroke-width: 1.5;
+  }
+}
+
+.info-block__btn-next.swiper-button-next {
+  margin-left: 40px;
+}
+
+.swiper-pagination.swiper-pagination {
+  position: relative;
+  bottom: 4px;
+  width: auto;
+  padding: 0 4px;
+}
+
+.swiper__start-number {
+  margin-left: auto;
+}

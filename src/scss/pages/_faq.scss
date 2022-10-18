@@ -1,0 +1,64 @@
+@use 'abstracts' as *;
+
+.faq {
+  .faq__inner {
+    padding-left: calc(var(--big-interval));
+  }
+
+  .faq__accordeon {
+    max-width: 774px;
+    font-weight: $fw-normal;
+  }
+
+  .faq__spoiler-item {
+    margin-bottom: 24px;
+  }
+
+  .faq__trigger-bar {
+    min-height: 60px;
+    padding-left: 24px;
+    border: 0.7px solid $primary;
+    background-color: $bg-primary;
+  }
+
+  .faq__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: $bg-secondary;
+    cursor: pointer;
+  }
+
+  .faq__title {
+    margin-right: 15px;
+    color: $grey1;
+    font-weight: $fw-normal;
+    font-size: $fz-l;
+    text-transform: uppercase;
+  }
+
+  .faq__expandable {
+    margin-top: 20px;
+    background-color: $bg-secondary;
+
+    .faq__title {
+      display: block;
+    }
+  }
+
+  // .faq__expandable.spoiler__expandable p::after,
+  // .faq__expandable.spoiler__expandable p::before {
+  //     content: '';
+  //     background-color: $bg-secondary;
+  // }
+}
+
+/* #endregion  --- FAQ --- */
+
+.scroll-lock {
+  overflow: hidden;
+}

@@ -1,0 +1,109 @@
+@use 'abstracts' as *;
+
+.hut-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  padding-top: 70px;
+  background: #baa1b4 url('./../img/hut-1.jpg') no-repeat 50% 50% / cover;
+  text-align: center;
+
+  h1 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.info-block {
+  .info-block__inner {
+    display: flex;
+  }
+
+  .info-block__slider.swiper {
+    flex-basis: 50%;
+    margin-right: calc($padding);
+  }
+
+  .info-block__slider.swiper.right-sided {
+    margin-right: 0;
+    margin-left: calc($padding);
+  }
+
+  .info-block__wrapper {
+    max-width: 546px;
+    height: 478px;
+    margin-bottom: 50px;
+  }
+
+  .info-block__slider-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 19px;
+    user-select: none;
+  }
+
+  .info-block__content {
+    flex-basis: 50%;
+  }
+
+  .info-block__btn-box {
+    margin-bottom: 48px;
+  }
+
+  .info-block__button {
+    padding-bottom: 2px;
+    border: none;
+    background-color: transparent;
+    color: $primary;
+    font-weight: $fw-normal;
+    font-style: italic;
+    font-size: $fz-l;
+    line-height: 30px;
+
+    &.tab-active {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  .info-block__button + .info-block__button {
+    margin-left: 30px;
+  }
+
+  .info-block__content-box {
+    position: relative;
+    min-height: fit-content;
+  }
+
+  .info-block__text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: $grey1;
+    font-size: $fz-m;
+    line-height: 30px;
+  }
+
+  .info-block__text.pos {
+    position: static;
+  }
+}
+
+.info-block.slider-right {
+  .info-block__slider.swiper {
+    margin-right: 0;
+    margin-left: calc($padding);
+  }
+}
+
+.info-block__slider-item {
+  width: 100%;
+
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,52 @@
+@use 'abstracts' as *;
+
+.booking-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 386px;
+  height: 100px;
+
+  .booking-frame__button {
+    flex-basis: 260px;
+    height: 100px;
+  }
+
+  .booking-frame__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 126px;
+    height: 100%;
+    padding: 0 28px;
+    background-color: $bg-secondary;
+    color: $grey1;
+    font-weight: $fw-normal;
+    font-size: $fz-xl;
+    line-height: 28px;
+
+    &:hover {
+      color: $grey1;
+    }
+  }
+}
+
+.booking-frame__price p::before {
+  content: 'from';
+  position: absolute;
+  top: 20px;
+  font-size: $fz-xs;
+  line-height: 18px;
+  text-align: left;
+}
+
+.booking-frame__price p::after {
+  content: 'per night';
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: $fz-xs;
+  line-height: 18px;
+  text-align: left;
+}

@@ -1,0 +1,138 @@
+@use 'abstracts' as *;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary;
+  color: $bg-secondary;
+
+  .footer__subscription {
+    flex-basis: 50%;
+    padding-right: 50px;
+  }
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px var(--big-interval) 0;
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__info {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .footer__policy-list {
+    display: flex;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__policy-item + &__policy-item {
+    margin-left: 33px;
+  }
+
+  .footer__policy-item {
+    margin-bottom: 20px;
+
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  }
+
+  .footer__payment-list {
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    max-height: 50px;
+    margin-top: 20px;
+  }
+
+  .footer__payment-item svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__payment-item + &__payment-item {
+    margin-left: 40px;
+  }
+}
+
+.sub-form {
+  position: relative;
+  min-width: 0;
+  max-width: 80ch;
+  margin-bottom: 5px;
+  border-bottom: 1px solid $bg-secondary;
+
+  .sub-form__input {
+    width: 100%;
+    padding-right: 40px;
+    border: none;
+    background-color: $primary;
+    color: $bg-primary;
+    font-weight: $fw-light;
+    font-style: italic;
+    font-size: $fz-m;
+    line-height: 30px;
+
+    &::placeholder {
+      color: $bg-primary;
+    }
+
+    &:focus {
+      outline: 1px dashed $bg-secondary;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+
+  .sub-form__submit {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: $primary;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .sub-form__arrow {
+    position: relative;
+    top: 5px;
+
+    &:hover path {
+      fill: $grey1;
+      stroke: $grey1;
+      transition: $transition-time-sm;
+    }
+  }
+}
+
+.footer__copyright {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  padding-left: var(--big-interval);
+}
+
+/* #endregion  --- FOOTER --- */

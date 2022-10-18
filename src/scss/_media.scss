@@ -1,0 +1,267 @@
+@use 'abstracts' as *;
+
+@media (max-width: 1350px) {
+  .footer__info {
+    align-items: flex-end;
+  }
+
+  .footer__policy-list {
+    flex-direction: column;
+    align-items: flex-end;
+
+    .footer__policy-item {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --big-interval: 75px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .cabins__top {
+    flex-flow: column wrap;
+  }
+
+  .cabins__img {
+    flex: 1;
+    margin: 32px auto 0;
+  }
+
+  .contacts__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contacts__content {
+    margin-right: 0;
+  }
+
+  .contacts__widget {
+    margin: 32px auto;
+  }
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    button {
+      display: none;
+    }
+
+    .header__inner {
+      justify-content: center;
+    }
+
+    .header__logo {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .burger-icon {
+    position: absolute;
+    top: 50%;
+    left: $container-padding;
+    z-index: 5;
+    display: block;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .burger-icon-span,
+  .burger-icon::before,
+  .burger-icon::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    transition: all 0.2s;
+  }
+
+  .burger-icon::after {
+    content: '';
+    bottom: 0;
+    background-color: #000;
+  }
+
+  .burger-icon::before {
+    content: '';
+    top: 0;
+    background-color: #000;
+  }
+
+  .burger-icon-span {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+  }
+
+  .burger-icon.active {
+    .burger-icon-span {
+      transform: scale(0);
+    }
+  }
+
+  .burger-icon.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  .burger-icon.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translateY(50%);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding-left: $padding;
+    background-color: rgb(255 255 255);
+    transition: left 0.5s;
+
+    .menu__list {
+      position: fixed;
+      top: 100px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 150px;
+      color: #000;
+
+      a {
+        font-size: 30px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .header__inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    display: block;
+    width: 100vw;
+    height: 100px;
+    background-color: #fff;
+  }
+
+  .lng-menu {
+    position: absolute;
+    top: 35px;
+    right: $padding;
+    z-index: 5;
+    opacity: 1;
+    transition: opacity $transition-time-mid ease-out;
+    transform: scale(2);
+  }
+
+  .menu.hidden {
+    position: absolute;
+    left: -150%;
+    transition: left $transition-time-mid;
+
+    & + .lng-menu {
+      opacity: 0;
+    }
+  }
+
+  .info-block {
+    .info-block__inner {
+      flex-direction: column;
+    }
+
+    .info-block__slider.swiper {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .info-block:not(.slider-right) {
+    .info-block__content {
+      order: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+
+    .footer__content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer__subscription {
+      padding-right: 0;
+    }
+
+    .footer__payment-list {
+      order: -1;
+    }
+
+    .footer__policy-list {
+      align-items: center;
+    }
+
+    .footer__policy-item {
+      margin-left: 0;
+    }
+
+    .footer__info {
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 486px) {
+  $container-padding: 5px;
+
+  :root {
+    --big-interval: 16px;
+  }
+
+  .datepicker__button {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer {
+    .sub-form {
+      width: 250px;
+    }
+
+    .footer__payment-item {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .contacts__widget {
+    transform: scale(80%);
+  }
+}
